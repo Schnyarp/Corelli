@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adam Corelli Photos</title>
+  <meta name="description" content="Photography by Adam Corelli. Click a thumbnail to open the photo." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{ --brand:#205d92; --muted:#8ca7c4; --bg:#f8f9fa; --text:#222; --max:1200px; }
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    header{background:var(--brand);color:#fff;padding:20px;text-align:center}
+    header h1{margin:0;font-size:1.5rem}
+    .wrap{max-width:var(--max);margin:22px auto;padding:0 18px}
+    .intro{color:#333;margin:12px 0 18px}
+    /* Grid: the images are full-size files scaled by CSS to act as thumbnails */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+    .thumb{display:block;overflow:hidden;border-radius:8px;box-shadow:0 6px 16px rgba(10,20,30,0.06);background:#fff}
+    .thumb img{width:100%;height:140px;object-fit:cover;display:block}
+    footer{max-width:var(--max);margin:28px auto;text-align:center;color:var(--muted);font-size:0.95rem;padding-bottom:28px}
+    /* Lightbox overlay */
+    .lb-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;z-index:9999;padding:18px}
+    .lb-overlay.open{display:flex}
+    .lb-content{max-width:1100px;max-height:90vh;overflow:auto;position:relative}
+    .lb-img{display:block;max-width:100%;height:auto;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+    .lb-caption{color:#e6e6e6;margin-top:10px;text-align:center}
+    .lb-close{position:absolute;right:-6px;top:-6px;background:#fff;color:#222;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.2)}
+    .lb-nav{position:absolute;left:8px;top:50%;transform:translateY(-50%);color:#fff;font-size:40px;cursor:pointer;user-select:none}
+    .lb-nav.right{left:auto;right:8px}
+    @media (max-width:520px){ .grid{grid-template-columns:repeat(2,1fr)} .lb-close{width:32px;height:32px;right:-4px;top:-4px} }
+  </style>
+</head>
+<body>
+  <header><h1>Adam Corelli Photos</h1></header>
+
+  <main class="wrap" id="gallery-root">
+    <div class="intro">
+      <p>Here are photos I have taken over the years. To see a larger version, just click on whichever thumbnail has caught your eye. Please enjoy!</p>
+    </div>
+
+    <div class="grid">
+      <div class="item">
+        <a class="thumb" data-caption="Spain Train Station" href="/Images/spain-train-station.jpeg">
+          <img src="/Images/spain-train-station.jpeg" alt="Spain Train Station" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="London Punks" href="/Images/london-punks.jpeg">
+          <img src="/Images/london-punks.jpeg" alt="London Punks" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Man In Van" href="/Images/man-in-van.jpeg">
+          <img src="/Images/man-in-van.jpeg" alt="Man In Van" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="PEI Sunset" href="/Images/sunset-prince-edward-island.jpeg">
+          <img src="/Images/sunset-prince-edward-island.jpeg" alt="PEI Sunset" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Running At Sunset" href="/Images/running-at-sunset.jpeg">
+          <img src="/Images/running-at-sunset.jpeg" alt="Running At Sunset" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Starry Night" href="/Images/starry-night.jpeg">
+          <img src="/Images/starry-night.jpeg" alt="Starry Night" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Hurricane Night" href="/Images/stormy-night.jpeg">
+          <img src="/Images/stormy-night.jpeg" alt="Hurricane Night" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Santorini Vase" href="/Images/greece-vase.jpeg">
+          <img src="/Images/greece-vase.jpeg" alt="Santorini Vase" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="PEI Beech House" href="/Images/pei-beechhouse.jpeg">
+          <img src="/Images/pei-beechhouse.jpeg" alt="PEI Beech House" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Victoria-By-The-Sea" href="/Images/victoria-by-the-sea.jpeg">
+          <img src="/Images/victoria-by-the-sea.jpeg" alt="Victoria-By-The-Sea" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Venice f/x" href="/Images/venice-fx.jpeg">
+          <img src="/Images/venice-fx.jpeg" alt="Venice f/x" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Quebec City Night" href="/Images/quebec-city-night.jpeg">
+          <img src="/Images/quebec-city-night.jpeg" alt="Quebec City Night" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Spring Squirrel" href="/Images/spring-squirrel.jpeg">
+          <img src="/Images/spring-squirrel.jpeg" alt="Spring Squirrel" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Vatican From Above" href="/Images/eighties-vatican.jpeg">
+          <img src="/Images/eighties-vatican.jpeg" alt="Vatican From Above" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="New York Blue" href="/Images/new-york-blue.jpeg">
+          <img src="/Images/new-york-blue.jpeg" alt="New York Blue" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Niagara Falls 2D" href="/Images/niagara-falls-2d.jpeg">
+          <img src="/Images/niagara-falls-2d.jpeg" alt="Niagara Falls 2D" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Parliament Night" href="/Images/parliament-night.jpeg">
+          <img src="/Images/parliament-night.jpeg" alt="Parliament Night" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Accident Photo" href="/Images/accident-photo.jpeg">
+          <img src="/Images/accident-photo.jpeg" alt="Accident Photo" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Early Guggenheim" href="/Images/early-guggenheim.jpeg">
+          <img src="/Images/early-guggenheim.jpeg" alt="Early Guggenheim" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Island Run" href="/Images/island-run.jpeg">
+          <img src="/Images/island-run.jpeg" alt="Island Run" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Niagara-Falls Night" href="/Images/niagara-falls-night.jpeg">
+          <img src="/Images/niagara-falls-night.jpeg" alt="Niagara-Falls Night" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Confederation Bridge" href="/Images/confederation-bridge.jpeg">
+          <img src="/Images/confederation-bridge.jpeg" alt="Confederation Bridge" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="Sunset Loon" href="/Images/sunset-loon.jpeg">
+          <img src="/Images/sunset-loon.jpeg" alt="Sunset Loon" loading="lazy">
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="thumb" data-caption="PEI Walkway" href="/Images/pei-walkway.jpeg">
+          <img src="/Images/pei-walkway.jpeg" alt="PEI Walkway" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div id="lb" class="lb-overlay" role="dialog" aria-hidden="true" aria-label="Image viewer">
+    <div class="lb-content" role="document">
+      <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+      <div class="lb-nav left" id="lb-prev" aria-hidden="false">‹</div>
+      <div class="lb-nav right" id="lb-next" aria-hidden="false">›</div>
+      <img id="lb-img" class="lb-img" src="" alt="" />
+      <div id="lb-caption" class="lb-caption"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div style="text-align:center;color:var(--muted)">Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal lightbox functionality. Thumbs use the full-size image and have data-caption.
+    (function(){
+      const lb = document.getElementById('lb');
+      const lbImg = document.getElementById('lb-img');
+      const lbCaption = document.getElementById('lb-caption');
+      const lbClose = document.getElementById('lb-close');
+      const lbPrev = document.getElementById('lb-prev');
+      const lbNext = document.getElementById('lb-next');
+      const thumbs = Array.from(document.querySelectorAll('.thumb'));
+      let current = -1;
+      if(!thumbs.length) return;
+
+      function open(index){
+        const a = thumbs[index];
+        if(!a) return;
+        current = index;
+        const full = a.getAttribute('href');
+        const caption = a.dataset-caption || a.dataset.caption || '';
+        lbImg.src = full;
+        lbImg.alt = caption;
+        lbCaption.textContent = caption;
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); lbImg.src=''; lbCaption.textContent=''; document.body.style.overflow=''; current=-1; }
+      function prev(){ if(current>0) open(current-1); }
+      function next(){ if(current < thumbs.length-1) open(current+1); }
+
+      thumbs.forEach((t,i)=> t.addEventListener('click', function(e){ e.preventDefault(); open(i); }));
+
+      lbClose.addEventListener('click', close);
+      lbPrev.addEventListener('click', prev);
+      lbNext.addEventListener('click', next);
+
+      document.addEventListener('keydown', function(e){
+        if(lb.classList.contains('open')){
+          if(e.key === 'Escape'){ close(); }
+          else if(e.key === 'ArrowLeft'){ prev(); }
+          else if(e.key === 'ArrowRight'){ next(); }
+        }
+      });
+
+      lb.addEventListener('click', function(e){
+        if(e.target === lb) close();
+      });
+    })();
+  </script>
+</body>
+</html>
