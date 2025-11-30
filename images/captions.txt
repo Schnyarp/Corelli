@@ -7,7 +7,6 @@ london-punks.jpeg | London Punks
 man-in-van.jpeg | Man In Van
 sunset-prince-edward-island.jpeg | PEI Sunset
 running-at-sunset.jpeg | Running At Sunset
-running-trail.jpeg | Running Trail
 starry-night.jpeg | Starry Night
 stormy-night.jpeg | Hurricane Night
 greece-vase.jpeg | Santorini Vase
@@ -18,10 +17,8 @@ quebec-city-night.jpeg | Quebec City Night
 spring-squirrel.jpeg | Spring Squirrel
 eighties-vatican.jpeg |Vatican From Above
 new-york-blue.jpeg | New York Blue
-niagara-falls-2d.jpeg | Niagara Falls 2D
 parliament-night.jpeg | Parliament Night
 accident-photo.jpeg | Published in Globe and Mail
-early-guggenheim.jpeg | Early Guggenheim
 island-run.jpeg | Island Run
 niagara-falls-night.jpeg | Niagara-Falls Night
 confederation-bridge.jpeg | Confederation Bridge
