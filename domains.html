@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ten Billion Things: How to find a great domain when the low hanging fruit is long gone</title>
+  <meta name="description" content="An in-depth guide to finding a great domain name in a crowded digital world, by Adam Corelli.">
+  <!-- Styles adapted to match the rest of Corelli.com (banner + nav + story card) -->
+  <style>
+    :root{
+      --brand: #205d92;
+      --muted: #8ca7c4;
+      --page-bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #222;
+      --max-width: 720px;
+      --radius: 9px;
+      --muted-link: #3e5165;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.55;
+    }
+
+    /* Header / banner (site-wide pattern) */
+    header.site-header{
+      background:var(--brand);
+      color:#fff;
+      padding:2.0rem 0 0.6rem; /* space for title + byline + nav */
+      text-align:center;
+      border-bottom:4px solid #e9ecef;
+    }
+
+    /* Split headline: large top line + smaller subline */
+    header.site-header h1{
+      margin:0 0 0.35rem;
+      font-weight:700;
+      letter-spacing:0.01em;
+      line-height:1;
+    }
+    header.site-header .headline-large{
+      display:block;
+      font-size:3.2rem; /* larger main phrase */
+      margin-bottom:0.6rem; /* increased spacing between lines */
+      line-height:1;
+    }
+    header.site-header .headline-small{
+      display:block;
+      font-size:1.25rem; /* smaller sub-headline */
+      font-weight:600;
+      color:rgba(255,255,255,0.92);
+      margin-top:0;
+      font-style:italic; /* made it italic per request */
+      line-height:1.15;
+    }
+
+    header.site-header .byline{
+      font-size:1rem;
+      color: #b7c7d9;
+      margin-bottom:0.25rem;
+      margin-top:0.45rem;
+    }
+
+    /* Banner navigation inserted under the byline */
+    header.site-header .banner-nav {
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px 0;
+      margin-top:6px;
+      background:transparent;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+    header.site-header .banner-nav a {
+      color:#fff;
+      font-size:0.95rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    main.wrap{
+      max-width:calc(var(--max-width) + 96px);
+      margin:2.2rem auto 3rem;
+      padding:0 20px;
+    }
+
+    /* Story card */
+    article.card{
+      max-width:var(--max-width);
+      margin:0 auto;
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(44,62,80,0.06);
+      padding:2.3rem 2.2rem 2.7rem;
+    }
+
+    .subtitle{
+      display:block;
+      font-size:1.18rem;
+      font-style:italic;
+      color:var(--muted-link);
+      margin:0 0 1.3rem 0;
+    }
+    h2{
+      margin-top:2.2em;
+      color:#02447a;
+      font-size:1.35rem;
+      border-bottom:2px solid #e9ecef;
+      padding-bottom:0.3em;
+    }
+    h3{
+      margin-top:1.5em;
+      color:#185490;
+      font-size:1.08rem;
+    }
+
+    p{ margin:0 0 1rem 0; color:var(--text); font-size:1rem }
+    ul{ margin:0.2em 0 0.2em 0; padding-left:2em }
+    li{ margin-bottom:0.3em }
+    blockquote{
+      border-left:4px solid #dee2e6;
+      margin:1.2em 0;
+      padding:0.8em 1.5em;
+      background:#f2f6f9;
+      color:#444;
+      font-style:italic;
+    }
+    a{ color:#216ba3; text-decoration:none }
+    a:hover{text-decoration:underline}
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.7rem 0 1.1rem 0;
+    }
+
+    /* Contact tag styling (keeps same muted tone) */
+    .contact-tag {
+      color:var(--muted);
+      margin-bottom:0.35rem;
+      font-size:0.98rem;
+    }
+
+    @media (max-width:700px){
+      /* scale headline for mobile */
+      header.site-header .headline-large{ font-size:1.8rem; }
+      header.site-header .headline-small{ font-size:1rem; }
+      header.site-header .banner-nav a { font-size:0.9rem; }
+      article.card{ padding:1.1rem 0.9rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hidden hits.sh counter for corelli.com/domains.html -->
+  <img src="https://hits.sh/corelli.com/domains.html.svg?style=flat-square&label=visits" style="display:none;" alt="hit counter" />
+
+  <header class="site-header" role="banner" aria-label="Page banner">
+    <h1 aria-hidden="false">
+      <span class="headline-large">Ten Billion Things</span>
+      <span class="headline-small">How to find a great domain when the low hanging fruit is long gone</span>
+    </h1>
+
+    <div class="byline">By Adam Corelli</div>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="/about.html">About</a>
+      <a href="/news-index.html">News Archive</a>
+      <a href="/gallery-lightbox.html">Photography</a>
+      <a href="/musings.html" aria-current="page">Musings</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-labelledby="article-title">
+      <h2 id="article-title" style="display:none">Ten Billion Things — How to find a great domain</h2>
+
+      <span class="subtitle">The challenge pits creativity and research</span>
+
+      <p>
+        A great name is an epiphany, a simple bit of magic sparked by imagination. But alas securing a great name is anything but simple.
+      </p>
+      <p>
+        When it comes to naming, consider the numbers: Oxford University’s Eric Beinhocker estimated there are 10 billion distinct products and services offered in the world’s major economies. Since the rise of the web, more than six million trademarks have been registered in the United States alone. And more than 330 million domain names have been booked since the first dot com was registered on March 15, 1985.
+      </p>
+      <p>
+        Perhaps you plan to launch a startup or rebrand an existing company. Perhaps you aim to revive a promising company product or launch a new one. When selecting a name be prepared for hard work, for scoring a great name involves sparks of creativity, sometimes over and over, followed by lots of research and diligence.
+      </p>
+      <p>
+        Getting your name right is critical. It is one of the web’s not so secret little secrets: if you want to launch a web hit, you need a great name and generally a link to its corresponding domain. Get the wrong one and you will miss business opportunities and risk an expensive rebranding.
+      </p>
+      <p>
+        Here are tips to make the journey easier:
+      </p>
+
+      <h2>What’s In A Name?</h2>
+      <p>
+        Every article like this goes Shakespeare at some point. But it turns out there’s a lot in a name.
+      </p>
+      <p>
+        Names can be:
+      </p>
+      <ul>
+        <li>Conjured (made up)</li>
+        <li>Descriptive</li>
+      </ul>
+      <p>
+        A name can be one word or more, long or short, hybrid, combo, or location or service/product specific. (Think YourTownPlumbing.com or YourCountryTaxPreparation.com.) Choice expands dramatically for created, made up names. So does the complexity and risk of failure.
+      </p>
+      <p>
+        In short, you will want a name that is:
+      </p>
+      <ul>
+        <li>Contextual</li>
+        <li>Easy to spell</li>
+        <li>Easy to pronounce</li>
+        <li>Easy to hear</li>
+      </ul>
+      <p>
+        Such qualities help make a name memorable. Keep in mind who your audience is. Also keep in mind that for general audience branding, the typical vocabulary has between just 20,000 and 60,000 words depending upon education and literacy levels.
+      </p>
+
+      <h2>The Nitty-Gritty To Simplicity</h2>
+      <h3>Conjured Names</h3>
+      <p>
+        So let’s say you’ve decided to go for a conjured name, something made up, a whimsy never before heard but one that magically conveys what you’re all about.
+      </p>
+      <p>
+        A conjured name might include a hybrid of two words that characterize or allude to your business. It might be a word play on a local legend or historical archetype that bears echo to your intent or product or service.
+      </p>
+      <p>
+        Examples abound. Both famous and not so famous, for, after all, not everyone is out to launch a unicorn startup, but simply to manage their business on the web:
+      </p>
+      <ul>
+        <li>
+          Netflix co-founder Marc Randolph combined “net” and “flix” to come up with Netflix and then purchased (from us!) similar already registered aftermarket domains such as netflicks.com and webflicks.com.
+        </li>
+        <li>
+          Uber branded based upon a German word meaning ‘above’ or ‘exceptional’ or ‘super’. A very short, cool name, the company had rebranded from UberTaxi.com. They paid Universal Music Group, the owner of Uber.com at the time, two points in the business, which Uber then bought back for just $1 million before its stock surged.
+        </li>
+      </ul>
+      <p>
+        A successfully conjured name and its available domain has advantages. It can provide intellectual property rights typically unavailable to descriptive and generic branding while creating a unique expression that associates you with your audience and business.
+        It defines you and sets you apart. The reality too is that with so many domains now registered, it is very hard or virtually impossible to find a category defining domain available for registration without instead having to engage the potentially expensive domain aftermarket.
+      </p>
+      <p>
+        Conjuring names is not as easy as it seems. Entrepreneur.com contributor Alexander Watkins noted that going overly creative on a name, using either misspellings or obscure meanings, will typically fail.
+      </p>
+      <blockquote>
+        “This is by far the biggest mistake entrepreneurs make when naming their company,” Watkins states. “The problem with having a name like Naymz, Takkle, or Speesee is that you will forever have to spell it when you say it, because it isn’t spelled how people hear it. Plus, Siri and other voice recognition software do not understand names that are not spelled naturally.”
+      </blockquote>
+
+      <h3>Descriptive Names</h3>
+      <p>
+        While the creativity of a conjured name can be compelling, Watkins comments highlight the benefits that can accrue from a descriptive domain. Conjuring the right descriptive domain is not a process absent creativity however. And why descriptive domains?
+      </p>
+      <p>
+        Because of search engines and direct navigation trends, which is to say how people search the internet for needs fulfillment, whether looking for a product or service or information resource. People typically looking to fulfill a need will think in descriptive terms about that need, not brand terms.
+      </p>
+      <p>
+        Consider the success achieved by the likes of:
+      </p>
+      <ul>
+        <li>Cars.com</li>
+        <li>Hotels.com</li>
+        <li>Apartments.com</li>
+        <li>Insurance.com</li>
+        <li>Voice.com</li>
+      </ul>
+      <p>
+        The list is long. The downside is that premium domains are expensive. Insurance.com, for example, sold for $35.6 million, Hotels.com for $11 million. Voice.com, a more recent sale, was $30 million in cash. To the uninitiated, such sums seem ridiculous. At least initially.
+      </p>
+      <blockquote>
+        “A good domain can catch attention,” noted Forbes contributor David Teten, a venture capitalist and domain investor himself, “biasing people to prefer your company over competitors, and making it easy to reach the website when and if they decide to use it.”
+      </blockquote>
+      <p>
+        Teten’s firm has backed numerous sites built upon dictionary word domains. Teten notes that funding requests coming from a site branded on a top domain get noticed, but “a bad domain can sink you.”
+      </p>
+      <p>
+        Michael Gargiulo, CEO of VPN.com, explained in a Forbes article why his firm spent almost a million dollars acquiring their choice domain. It was in the math.
+      </p>
+      <blockquote>
+        “Essentially, you are valuing the EMD [exact match domain] on global search volume provided by Google Keyword Planner,” states Gargiulo, “and factoring in the amount of time it will take you to grow the domain to the No 1 position in search engines.”
+      </blockquote>
+      <p>
+        Gargiulo detailed his approach to buying VPN.com. “In 2016, the global monthly average of “VPN” was 8,800,000. At $1 per search and four years to become No. 1 in Google Search results, this still indicated that $976,730 was a great deal. Fast forward to July 2018 and we see the 12-month average of global search volume for “VPN” was 13,600,000, suggesting that the current value of VPN.com has grown to $5,500,000 in domain equity alone.”
+      </p>
+      <p>
+        In short, a great domain brings inherent lead generation. Putting it another way, it means there is value to be gained from an underused quality dot com domain. A quality domain properly used increases not just the value of your business, but also of that investment in the domain itself.
+      </p>
+      <p>
+        Indeed, you might be able to improve your balance sheet health through listing the Goodwill value of the domain, which can lead to better debt-equity ratios and lower financing costs for your overall business. Cars.com did just this when it valued the Goodwill of its domain at more than $800 million on its balance sheet, some 20 per cent of its equity value at the time.
+      </p>
+      <p>
+        Such mitigates the sticker-shock commonly experienced by domain buyers.
+      </p>
+      <p>
+        Of course, not every business will need a multimillion dollar dictionary word domain. And indeed, aside from such headline-grabbing large domain sales, most descriptive domains are available at manageable prices. This is especially so for domains that can be viewed this way: YourTown/Product-Service.
+      </p>
+      <p>
+        Entrepreneur.com contributor Jane Porter suggests picking the best keyword related to your product or service and finding a way to include it in your domain. If your business is location specific, then including that in the name can be a good option. Both approaches also work together. She cites a painting business that surged by including their city and service as their dot com name: their business subsequently soared.
+      </p>
+
+      <h2>Useful Domain Name Tips</h2>
+      <p>
+        To find out whether a registered domain can be acquired, simply visit the site. Chances are it is pointed at a for sale page or monetization page. You can reach the owner or broker to make an offer through such platforms. But keep some pointers in mind:
+      </p>
+      <ul>
+        <li>You can also email the whois “Administrator” contact using a whois resource. You can also research the history of a domain using <a href="https://www.domaintools.com/" target="_blank" rel="noopener">DomainTools.com</a>, which holds more than 10 billion historical whois records.</li>
+        <li>Further, you can research the historical use of virtually all domains using the ‘wayback machine’ at <a href="https://archive.org/web/" target="_blank" rel="noopener">archive.org</a>.</li>
+        <li>Don’t forget to check your intended use of the expression in trademark databases. This is where creativity meets research. The US Patent and TradeMark database is located at <a href="https://www.uspto.gov/" target="_blank" rel="noopener">www.uspto.gov</a>, while the Canadian Intellectual Property Office is located at <a href="https://www.ic.gc.ca/" target="_blank" rel="noopener">ic.gc.ca</a>.</li>
+        <li>Don’t use a hyphen as a work around on unavailable two-word domains. You will endlessly be left always carefully spelling out your domain. Search engines are biased against dashes in domains.</li>
+        <li>In booking a domain, ensure you or your company name are the registered owner (which is the top-of-form, first line in the whois records) and make sure you are the Administrator contact in the whois record, which controls changes to the overall name record.</li>
+        <li>Be darn sure to renew your domain! The web is littered with lost businesses simply because they forgot to pony up a $10 renewal fee. You can renew a dot com domain up to 10 years ahead.</li>
+      </ul>
+      <p>
+        In short, spend considerable time getting your name right. It might just be the most important factor in determining your success or failure, defining whether customers will remember you or even be able to find you.
+      </p>
+      <p>
+        Know your audience and target market.
+      </p>
+      <p>
+        In summary, if you’re launching or rebranding a major web business or service, aim for a top notch dot com dictionary word domain or something close to that. If you’re a mom and pop shop with a strong local focus, look toward either a conjured but memorable name or a long-tail descriptive domain.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="contact-tag">Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a></div>
+    &copy; 2025 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
