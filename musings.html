@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Musings — Adam Corelli</title>
+  <meta name="description" content="Musings — short essays, tips and guides by Adam Corelli." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#fff;
+      --text:#222;
+      --max:980px;
+      --radius:10px;
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page-bg);color:var(--text);-webkit-font-smoothing:antialiased;padding:0;line-height:1.6}
+
+    /* Header + banner nav (site-wide pattern) */
+    header.site-header{
+      background:var(--brand);
+      color:#fff;
+      padding:2.4rem 0 0.6rem;
+      text-align:center;
+      border-bottom:4px solid #e9ecef;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    /* Increased banner headline size */
+    header.site-header h1{
+      font-size:2.8rem; /* was 2.4rem */
+      margin:0;
+      font-weight:700;
+      line-height:1;
+    }
+    header.site-header .banner-nav {
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px 0;
+      margin-top:12px;
+      background:transparent;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+    /* Slightly reduced nav font-size to sit lighter under the larger headline */
+    header.site-header .banner-nav a {
+      color:#fff;
+      font-size:0.95rem; /* reduced from 1.04rem */
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .15s, background .15s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    main.wrap{ max-width:var(--max); margin:2.2rem auto 3rem; padding:0 20px; }
+
+    .lead-card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1.6rem;
+      box-shadow:0 6px 18px rgba(44,62,80,0.06);
+      margin-bottom:18px;
+      text-align:center;
+    }
+    .lead-card p{ margin:0; color:var(--text); }
+
+    .musing-list{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap:16px;
+    }
+    .musing{
+      background:var(--card);
+      border-radius:10px;
+      padding:14px;
+      box-shadow:0 6px 18px rgba(44,62,80,0.06);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .musing h3{ margin:0 0 8px 0; font-size:1.06rem }
+    .musing .meta{ color:var(--muted); font-size:0.92rem; margin-bottom:10px }
+    .musing p.excerpt{ margin:0 0 12px 0; color:var(--text) }
+    .musing a.read{
+      align-self:flex-start;
+      text-decoration:none;
+      color:var(--brand);
+      font-weight:600;
+      border-radius:6px;
+      padding:8px 12px;
+    }
+
+    .empty{ text-align:center; color:var(--muted); padding:36px 12px; }
+
+    footer.site-footer{ text-align:center; color:var(--muted); font-size:0.95rem; padding:1.2rem 0 1rem 0; }
+
+    @media (max-width:700px){
+      header.site-header h1{ font-size:1.8rem } /* increased mobile headline slightly */
+      header.site-header .banner-nav a { font-size:0.9rem; } /* slightly smaller on mobile */
+      .musing-list{ gap:12px }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1>Musings</h1>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="/about.html">About</a>
+      <a href="/news-index.html">News Archive</a>
+      <a href="/gallery-lightbox.html">Photography</a>
+      <a href="/musings.html" aria-current="page">Musings</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap" role="main" aria-labelledby="musings-heading">
+    <h2 id="musings-heading" style="display:none">Musings index</h2>
+
+    <div class="lead-card" role="region" aria-label="Musings introduction">
+      <p>Musings, mutterings and things eclectic that come to mind from time to time...</p>
+    </div>
+
+    <section class="musing-list" aria-label="List of musings">
+      <!-- Single entry: How To Find A Great Domain Name -->
+      <article class="musing" aria-labelledby="m1-title">
+        <div>
+          <h3 id="m1-title">How To Find A Great Domain Name</h3>
+          <div class="meta">By Adam Corelli</div>
+          <p class="excerpt">Practical tips on choosing and registering memorable domain names, avoiding pitfalls, and thinking long-term about brandable URLs.</p>
+        </div>
+
+        <div>
+          <a class="read" href="domains.html">Read ›</a>
+        </div>
+      </article>
+
+      <!-- New entry: Voters Raise A Stink -->
+      <article class="musing" aria-labelledby="m2-title">
+        <div>
+          <h3 id="m2-title">Voters Raise A Stink</h3>
+          <div class="meta">By Adam Corelli</div>
+          <p class="excerpt">A surreal satire in which America elects a Nose as President—promising to clear the air, appoint an Ear for oversight, and end the nation’s “stinking gridlock.”</p>
+        </div>
+
+        <div>
+          <a class="read" href="nose.html">Read ›</a>
+        </div>
+      </article>
+
+      <!-- Placeholder for future musings; will show if none present -->
+      <!-- Example:
+      <article class="musing" aria-labelledby="m2-title">...</article>
+      -->
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
