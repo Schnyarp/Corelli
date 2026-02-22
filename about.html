@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Adam Corelli</title>
+  <meta name="description" content="About Adam Corelli — journalist and writer." />
+  <meta property="og:title" content="About Adam Corelli" />
+  <meta property="og:description" content="About Adam Corelli — journalist and writer." />
+  <meta property="og:type" content="profile" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root {
+      --brand: #205d92;
+      --muted: #8ca7c4;
+      --page-bg: #f8f9fa;
+      --card: #fff;
+      --text: #222;
+      --max: 780px;
+      --radius: 10px;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header.site-header{
+      background: var(--brand);
+      color:#fff;
+      padding:2.4rem 0 0.6rem;
+      text-align:center;
+      border-bottom:4px solid #e9ecef;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    header.site-header h1{
+      font-size:2.4rem;
+      margin:0;
+      font-weight:700;
+      line-height:1;
+    }
+    header.site-header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header.site-header h1 a:hover,
+    header.site-header h1 a:focus{
+      text-decoration: underline;
+      outline: none;
+    }
+
+    header.site-header .banner-nav {
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px;
+      margin-top:12px;
+      background:transparent;
+      border-top:1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+    }
+    header.site-header .banner-nav a {
+      color:#fff;
+      font-size:1.04rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .15s, background .15s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead {
+      max-width: var(--max);
+      margin: 1.6rem auto 1.1rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    main.wrap{
+      max-width:var(--max);
+      margin: 0 auto 2rem;
+      padding:0 20px;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 6px;
+    }
+    .hero img{
+      max-width:520px;
+      width:86%;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(44,62,80,0.12);
+      display:block;
+      margin:0 auto;
+      background:#fff;
+      border: 1px solid #000;
+    }
+
+    article.card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(44,62,80,0.06);
+      padding:2rem;
+    }
+    article.card p{ margin:0 0 1rem 0; }
+
+    .bio-photo{
+      display:block;
+      margin:14px auto;
+      max-width:520px;
+      width:86%;
+      border-radius:10px;
+      box-shadow:0 8px 30px rgba(44,62,80,0.08);
+      background:#fff;
+      border:1px solid #000;
+    }
+
+    .photo-bottom{
+      text-align:center;
+      margin:18px 0 6px;
+    }
+    .photo-bottom img.bottom-photo{
+      display:block;
+      margin:0 auto;
+      max-width:360px;
+      width:86%;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(44,62,80,0.06);
+      border:1px solid #000;
+      background:#fff;
+    }
+
+    .callout {
+      max-width: var(--max);
+      margin: 12px auto 12px;
+      padding: 12px 14px;
+      background: #eef6ff;
+      border: 1px solid #d9e9fb;
+      border-radius: 10px;
+      color: #333;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(44,62,80,0.04);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 0.9rem;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:700px){
+      article.card{ padding:1rem; }
+      header.site-header h1{ font-size:1.6rem; }
+      header.site-header .banner-nav{
+        gap:1.1rem;
+        padding:10px 0 12px;
+        margin-top:8px;
+      }
+      .hero img{ max-width:440px; }
+      .bio-photo{ max-width:440px; }
+      .photo-bottom img.bottom-photo{ max-width:320px; }
+      .subhead .kicker{ font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1><a href="/index.html">Corelli.com</a></h1>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="/about.html" aria-current="page">About</a>
+      <a href="/news-index.html">News Archive</a>
+      <a href="/gallery-lightbox.html">Photography</a>
+      <a href="/musings.html">Musings</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">About Adam Corelli</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="images/young-adam.jpeg" alt="Young Adam Corelli" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-labelledby="about-title">
+      <section id="bio">
+        <p>I AM A 1961 model, more than 90 per cent water, with various salts, electrolytes and industry-inspired inorgano chlorines mixed together and enclosed in a rubbery wrapping. In short, I am a human.</p>
+
+        <p>I live in Toronto. I attended the University of Toronto in the 1980s and while there began writing for the Globe and Mail, Canada's National Newspaper.</p>
+
+        <p>That started about two decades in print journalism, either staff or freelance, for publications such as Time, Fortune, the Independent (U.K.), Saturday Night Magazine, Financial Times of Canada, Old Farmers' Almanac, Toronto Star and others. I also produced television for Canada's CBC‑TV and contributed to some television and radio stations in Canada and the United States.</p>
+
+        <p>I have been lucky to interview some of the most unique people to grace the planet, including Paul Reichmann, Kenneth Thomson, Bill Gates, Pierre Trudeau and others, and I have worked with some great editors, who often let me investigate things uncommon or unexplored.</p>
+
+        <img src="images/interviewing-mulroney.jpeg" alt="Adam Corelli interviewing Brian Mulroney" class="bio-photo" />
+
+        <p>In the early 1990s, I felt another strong pull. I began thinking about 'needs' journalism instead of traditional news journalism, less on writing the stories that make headlines and more on giving people practical information they could actually use. My goal was to create resources that were easy to understand and helped people more effectively identify and meet their needs.</p>
+
+        <p>I built a database of articles focused on financial needs for a Canadian bank. But it was delivered through a dial-up service that was quickly made obsolete by the emergence of the web. The idea of the so-called Information Superhighway had long capivated me and I had a front row seat watching it emerge.</p>
+
+        <p>When the web started to take shape in the mid-1990s, I dove right in. I remained focused on needs-driven content. The shift to the Internet, this magical <em>media with memory</em> as I labelled it decades ago, created an alluring prospect for needs journalism compared to news journalism. Simply put, the former would natually possess a long shelf life. Additionally, needs education will typically lead to needs-fulfillment, or a transactional or distributive experience. It gave such a publishing model a compelling business case.</p>
+
+        <p>I further magnified the notion by booking the best available domain name for each area of need. In these very early days of the web there was no shortage of low-hanging fruit, which enabled me to assemble a broad portfolio of top-of-mind quality descriptive domain names. The hope was to cross-promote and cross-pollinate them all. The hope was to build demographics around needs instead of the Big Brother like data profiling of users that emerged.</p>
+
+        <p>It was a prescient notion. Alas it didn't quite come to pass. The reasons are myriad, from personal distractions to twists of fate. But the biggest was a lack of management skill. It took years for me to realize that sometimes the innovator who conjures an idea is often not the right person to manage it.</p>
+
+        <p>Now the rise of artificial intelligence has re-inspired some of my publishing ambitions. I have several sites in development with the help of AI. AI has also helped me in both the coding of this site and some its content creation. To the future we boldly go!</p>
+      </section>
+    </article>
+
+    <div class="photo-bottom" aria-hidden="false">
+      <img class="bottom-photo" src="images/about-adam-corelli.jpeg" alt="Adam Corelli" />
+    </div>
+
+    <div class="callout" role="note" aria-label="Photo note">
+      A more recent photo of Adam Corelli!
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
