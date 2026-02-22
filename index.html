@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corelli.com</title>
+  <meta name="description" content="The website of Adam Corelli — writing, photography, and musings.">
+  <style>
+    :root {
+      --brand: #205d92;
+      --muted: #8ca7c4;
+      --page-bg: #f8f9fa;
+      --card: #fff;
+      --text: #222;
+      --max: 1100px;
+      --radius: 10px;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: var(--page-bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: var(--brand);
+      text-align: center;
+      padding: 2.4rem 0 1.1rem 0;
+      border-bottom: 2px solid #e9ecef;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+      margin: 0;
+      padding: 0 1rem;
+      line-height: 1.05;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1.05rem 0 1.05rem 0;
+      background: var(--brand);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 1.05rem;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: color 0.2s, background 0.2s;
+      padding: 0.22em 0.5em;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      background: #fff;
+      color: var(--brand);
+    }
+
+    main.wrap {
+      max-width: var(--max);
+      margin: 2rem auto 2.2rem auto;
+      padding: 0 20px;
+    }
+
+    /* Moved subhead below banner/nav and above content */
+    .subhead {
+      text-align: center;
+      color: #333;
+      font-size: 1.08rem;
+      margin: 1.4rem auto 1.1rem auto;
+      max-width: var(--max);
+      padding: 0 20px;
+    }
+
+    .top-grid {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .photo-card,
+    .box {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44, 62, 80, 0.06);
+      overflow: hidden;
+    }
+
+    .photo-wrap {
+      padding: 14px 14px 8px 14px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Reduced photo size by ~50% (cap width) */
+    .hero-photo {
+      width: 100%;
+      max-width: 260px;
+      display: block;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 2px 18px rgba(44,62,80,0.12);
+      object-fit: cover;
+    }
+
+    .photo-meta {
+      padding: 0 14px 16px 14px;
+    }
+
+    .photo-meta h2 {
+      margin: 10px 0 6px 0;
+      font-size: 1.25rem;
+    }
+
+    .photo-meta p {
+      margin: 0;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    .photo-meta a {
+      color: var(--brand);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .photo-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .box {
+      padding: 16px;
+    }
+
+    .box h2 {
+      margin: 0 0 6px 0;
+      font-size: 1.15rem;
+    }
+
+    .box .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      margin: 0 0 12px 0;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    .box a.read {
+      display: inline-block;
+      color: var(--brand);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    .box a.read:hover {
+      text-decoration: underline;
+    }
+
+    /* Inner list items for blurbs */
+    .blurb {
+      border-top: 1px solid rgba(32,93,146,0.12);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+    .blurb:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .blurb h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.05rem;
+    }
+    .blurb h3 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .blurb h3 a:hover {
+      text-decoration: underline;
+    }
+    .blurb .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+    .blurb p {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    .wide-box {
+      margin-top: 18px;
+      padding: 18px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 1.6rem 0 1.1rem 0;
+    }
+
+    .privacy-line {
+      margin: 0 0 8px 0;
+      color: #6f8eae; /* slightly different than muted, but consistent */
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      header h1 { font-size: 1.9rem; }
+      .top-grid { grid-template-columns: 1fr; }
+      .hero-photo { max-width: 320px; }
+    }
+
+    @media (max-width: 520px) {
+      nav { gap: 1.2rem; }
+      .hero-photo { max-width: 260px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Corelli.com</h1>
+  </header>
+
+  <nav>
+    <a href="about.html">About</a>
+    <a href="news-index.html">News Archive</a>
+    <a href="gallery-lightbox.html">Photography</a>
+    <a href="musings.html">Musings</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Moved here: below blue banner/nav but above photo/content -->
+  <div class="subhead">The website of Adam Corelli.</div>
+
+  <main class="wrap">
+    <section class="top-grid" aria-label="Homepage highlights">
+      <!-- Left photo + photography promo -->
+      <article class="photo-card" aria-label="Photography highlight">
+        <div class="photo-wrap">
+          <img src="images/spain-train-station.jpeg" alt="Spain train station photograph" class="hero-photo">
+        </div>
+        <div class="photo-meta">
+          <h2>Photography</h2>
+          <p>
+            A selection of my photography. Visit the
+            <a href="gallery-lightbox.html">Photography</a> section to browse.
+          </p>
+        </div>
+      </article>
+
+      <!-- Right column: single Musings box with two blurbs -->
+      <section class="box" aria-labelledby="musings-title">
+        <h2 id="musings-title">
+          <a href="musings.html" style="color:var(--text);text-decoration:none;">Musings</a>
+        </h2>
+        <div class="meta">Short essays, satire, and ideas</div>
+        <p>Musings, mutterings and things eclectic that come to mind from time to time...</p>
+
+        <div class="blurb" aria-labelledby="m-ai-title">
+          <h3 id="m-ai-title"><a href="ai.html">AI Will Be The Great Liberator</a></h3>
+          <div class="meta">By Adam Corelli</div>
+          <p>AI can unleash creativity and expand human potential—if we also adapt how prosperity is shared amid disruption.</p>
+          <a class="read" href="ai.html">Read →</a>
+        </div>
+
+        <div class="blurb" aria-labelledby="m-moon-title">
+          <h3 id="m-moon-title"><a href="moon.html">Driving On The Moon</a></h3>
+          <div class="meta">By Adam Corelli</div>
+          <p>A near-future vision of teleoperated lunar rovers—subscribers steering tiny moon trucks from Earth with a manageable delay.</p>
+          <a class="read" href="moon.html">Read →</a>
+        </div>
+      </section>
+    </section>
+
+    <!-- Wide News Archive box under the photo + musings -->
+    <section class="box wide-box" aria-labelledby="news-archive-title">
+      <h2 id="news-archive-title">
+        <a href="news-index.html" style="color:var(--text);text-decoration:none;">News Archive</a>
+      </h2>
+      <div class="meta">Writing • Newspapers and magazines</div>
+      <p>
+        A sampling of my writing for newspapers and magazines from around the world, including selected reprints and long-form pieces.
+      </p>
+
+      <div class="blurb" aria-labelledby="n1-title">
+        <h3 id="n1-title"><a href="the-house-with-the-most-cats-in-north-america.html">The House With The Most Cats In North America</a></h3>
+        <div class="meta">By Adam Corelli</div>
+        <p>I tell the story of Jack and Donna Wright, who lived in their house in Kingston, Ontario with their 640 cats, the most in any house in North America.</p>
+        <a class="read" href="the-house-with-the-most-cats-in-north-america.html">Read the full article →</a>
+      </div>
+
+      <div class="blurb" aria-labelledby="n2-title">
+        <h3 id="n2-title"><a href="even-in-a-bear-market-slime-pays.html">Even In A Bear Market, Slime Pays</a></h3>
+        <div class="meta">By Adam Corelli</div>
+        <p>The story of Canada’s least glamorous criminal, the grease thief. But sludge from the dinner grill holds far more value than you might have expected.</p>
+        <a class="read" href="even-in-a-bear-market-slime-pays.html">Read the full article →</a>
+      </div>
+
+      <a class="read" href="news-index.html" style="margin-top:6px;">Visit News Archive →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
