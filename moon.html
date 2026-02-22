@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Driving On The Moon — Corelli.com</title>
+  <meta name="description" content="A musing on teleoperated lunar rovers: a real-time(ish) driving experience on the Moon, guided from Earth by subscribers.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --text:#222;
+      --max: 780px;
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+
+    *{ box-sizing: border-box; }
+
+    body {
+      font-family: var(--font, 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif);
+      background: var(--page-bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header.site-header{
+      background: var(--brand);
+      text-align: center;
+      padding: 2.4rem 0 0.6rem 0;
+      border-bottom: 4px solid #e9ecef;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    header.site-header h1{
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+      margin: 0;
+      padding: 0 1rem;
+      line-height: 1;
+    }
+    header.site-header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header.site-header h1 a:hover,
+    header.site-header h1 a:focus{
+      text-decoration: underline;
+      outline: none;
+    }
+
+    header.site-header .banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px;
+      margin-top:12px;
+      background:transparent;
+      border-top:1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+    }
+    header.site-header .banner-nav a{
+      color:#fff;
+      font-size:1.04rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition: color 0.15s, background 0.15s;
+      padding: 0.22em 0.5em;
+      border-radius: 6px;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color: var(--brand);
+      outline:none;
+    }
+
+    /* Subhead styling (matches other updated pages) */
+    .subhead{
+      max-width: var(--max);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .main-text {
+      max-width: 700px;
+      margin: 0 auto 2.3rem auto;
+      font-size: 1.18rem;
+      color: var(--text);
+      padding: 0 1rem;
+      text-align: left;
+    }
+    .main-text a {
+      color: var(--brand);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .story-photo-container {
+      width: 100%;
+      text-align: center;
+      margin: 1.2rem 0 1.6rem 0;
+    }
+    .story-photo {
+      max-width: 470px;
+      width: 100%;
+      border-radius: 14px;
+      background: transparent;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #000;
+      box-shadow: 0 2px 18px rgba(44,62,80,0.12);
+      object-fit: cover;
+    }
+
+    footer.site-footer{
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 1.7rem 0 1.1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      header.site-header h1 { font-size: 1.6rem; }
+      .main-text { font-size: 1.08rem; padding: 0 0.3rem; }
+      .story-photo { max-width: 310px; }
+      header.site-header .banner-nav { gap:1.2rem; padding:10px 0 12px; margin-top:10px; }
+      .subhead .kicker{ font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1><a href="/index.html">Corelli.com</a></h1>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="about.html">About</a>
+      <a href="news-index.html">News Archive</a>
+      <a href="gallery-lightbox.html">Photography</a>
+      <a href="musings.html">Musings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">Driving On The Moon</div>
+  </div>
+
+  <main class="main-text">
+    <div class="story-photo-container">
+      <img src="images/moontruck.jpeg" alt="A lunar rover or moon truck concept on a dusty surface" class="story-photo">
+    </div>
+
+    <p>
+      What if you could climb into a vehicle here on Earth, press the accelerator, and feel the quiet thrill of rolling across the Moon?
+    </p>
+
+    <p>
+      Picture this: a fleet of tiny, solar-powered lunar rovers — each barely a foot long — waiting in sunlight near a landing zone. Hundreds of them, cached in neat rows, ready to wake at the touch of a subscriber’s command. On Earth, subscribers step into a paired cockpit — perhaps a modified electric pickup or a stationary, game-like driving pod — whose “windows” are actually immersive displays streaming live views from cameras mounted on the rover’s front, rear, and flanks. Turn the wheel on Earth; 1.3 seconds later, the rover turns on the Moon. Another 1.3 seconds and the driver sees the result. The delay is real — about 2.6 seconds round trip — but manageable. It’s not fantasy. It’s physics.
+    </p>
+
+    <p>
+      We already know the fundamentals work. Space agencies like NASA have remotely operated robotic explorers for decades. The Moon is only about 1.3 light-seconds away, far closer than Mars. Teleoperation at that distance feels like a slightly laggy video game — entirely feasible with smart control software that smooths steering and prevents tip-overs. Add panoramic cameras, robust compression, and a high-bandwidth link via ground stations (and relay satellites if needed), and you have true lunar telepresence.
+    </p>
+
+    <p>
+      Now imagine the design language. The Moon rovers could resemble tiny versions of the angular pickup that redefined electric trucks, inspired by the Tesla Cybertruck. On Earth, subscribers might sit inside a matching vehicle shell — or a dedicated console styled like one — creating a sense of pairing between terrestrial cockpit and lunar rover. It’s experiential symmetry: a “Cybertruck” on Earth guiding its miniature twin across regolith under a black sky.
+    </p>
+
+    <p>
+      The business model writes itself. Subscribers book a one-hour session — perhaps for a few thousand dollars at first, falling over time as launch and communications costs decline. Corporate sponsors underwrite exploration zones. Schools reserve time slots for students to conduct real lunar field trips. Artists choreograph rover ballets at sunrise along the terminator line. Scientists crowdsource terrain mapping. A global audience gathers for live events: crater sprints, regolith rallies, slow-motion lunar jumps in one-sixth gravity.
+    </p>
+
+    <p>
+      Technically, the challenges are substantial but solvable. The rovers must survive vacuum, radiation, and wild temperature swings. Dust mitigation is critical. Solar panels and efficient batteries keep them operating through long lunar days. Onboard autonomy prevents dangerous maneuvers during signal delay. Communications infrastructure ensures stable video streams. None of this violates known physics; it’s engineering, logistics, and capital.
+    </p>
+
+    <p>
+      And capital may be the most interesting piece. A partnership between Tesla, Inc. and SpaceX would feel almost inevitable: launch capability meets electric design and software prowess. The narrative is powerful — not just tourism, but democratized exploration. A new kind of mobility company that spans worlds.
+    </p>
+
+    <p>
+      There’s poetry in it. For centuries, the Moon has been a distant mirror. With telepresence, it becomes terrain — textured, navigable, participatory. You won’t just look at the Moon; you’ll leave tracks there. You’ll steer around a rock and feel, seconds later, the confirmation of motion on another world. The experience would be neither purely virtual nor fully physical, but something new: embodied presence at a cosmic remove.
+    </p>
+
+    <p>
+      Drive the Moon. Not as an astronaut. As yourself.
+    </p>
+
+    <p>
+      <a href="musings.html">← Back to Musings</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
