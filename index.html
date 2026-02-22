@@ -77,14 +77,26 @@
       padding: 0 20px;
     }
 
-    /* Moved subhead below banner/nav and above content */
     .subhead {
-      text-align: center;
-      color: #333;
-      font-size: 1.08rem;
-      margin: 1.4rem auto 1.1rem auto;
       max-width: var(--max);
+      margin: 1.6rem auto 1.1rem auto;
       padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 0 0.35rem 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .subhead .deck {
+      margin: 0;
+      color: #333;
+      font-size: 1.05rem;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .top-grid {
@@ -102,13 +114,6 @@
       overflow: hidden;
     }
 
-    .photo-wrap {
-      padding: 14px 14px 8px 14px;
-      display: flex;
-      justify-content: center;
-    }
-
-    /* Two-photo stack: keep same visual height for both images */
     .photo-stack {
       padding: 14px 14px 8px 14px;
       display: grid;
@@ -119,12 +124,24 @@
     .hero-photo {
       width: 100%;
       max-width: 260px;
-      height: 185px;          /* fixed height to match both photos */
+      height: 185px;
       display: block;
       border-radius: 12px;
       border: 2px solid #000;
       box-shadow: 0 2px 18px rgba(44,62,80,0.12);
-      object-fit: cover;      /* crops to keep consistent height */
+      object-fit: cover;
+      background: #e9ecef;
+    }
+
+    .hero-photo--narrow {
+      width: 100%;
+      max-width: 210px;
+      height: 185px;
+      display: block;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 2px 18px rgba(44,62,80,0.12);
+      object-fit: contain;
       background: #e9ecef;
     }
 
@@ -187,7 +204,6 @@
       text-decoration: underline;
     }
 
-    /* Inner list items for blurbs */
     .blurb {
       border-top: 1px solid rgba(32,93,146,0.12);
       padding-top: 12px;
@@ -224,6 +240,12 @@
       padding: 18px;
     }
 
+    /* Light blue News Archive background */
+    .wide-box--news {
+      background: #eef6ff;             /* very light blue */
+      border: 1px solid #d9e9fb;       /* subtle edge */
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -241,11 +263,15 @@
       header h1 { font-size: 1.9rem; }
       .top-grid { grid-template-columns: 1fr; }
       .hero-photo { max-width: 320px; height: 210px; }
+      .hero-photo--narrow { max-width: 260px; height: 210px; }
+      .subhead .kicker { font-size: 1.2rem; }
+      .subhead .deck { font-size: 1.02rem; }
     }
 
     @media (max-width: 520px) {
       nav { gap: 1.2rem; }
       .hero-photo { max-width: 260px; height: 185px; }
+      .hero-photo--narrow { max-width: 210px; height: 185px; }
     }
   </style>
 </head>
@@ -263,15 +289,17 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="subhead">The website of Adam Corelli.</div>
+  <div class="subhead">
+    <div class="kicker">The website of Adam Corelli</div>
+    <p class="deck">Reviews articles written over the years, musings of things that come to mind and a sample of my photography.</p>
+  </div>
 
   <main class="wrap">
     <section class="top-grid" aria-label="Homepage highlights">
-      <!-- Left photo + photography promo -->
       <article class="photo-card" aria-label="Photography highlight">
         <div class="photo-stack">
           <img src="images/spain-train-station.jpeg" alt="Spain train station photograph" class="hero-photo">
-          <img src="images/man-in-van.jpeg" alt="Man in van photograph" class="hero-photo">
+          <img src="images/man-in-van.jpeg" alt="Man in van photograph" class="hero-photo--narrow">
         </div>
         <div class="photo-meta">
           <h2>Photography</h2>
@@ -282,7 +310,6 @@
         </div>
       </article>
 
-      <!-- Right column: single Musings box with two blurbs -->
       <section class="box" aria-labelledby="musings-title">
         <h2 id="musings-title">
           <a href="musings.html" style="color:var(--text);text-decoration:none;">Musings</a>
@@ -306,8 +333,7 @@
       </section>
     </section>
 
-    <!-- Wide News Archive box under the photo + musings -->
-    <section class="box wide-box" aria-labelledby="news-archive-title">
+    <section class="box wide-box wide-box--news" aria-labelledby="news-archive-title">
       <h2 id="news-archive-title">
         <a href="news-index.html" style="color:var(--text);text-decoration:none;">News Archive</a>
       </h2>
