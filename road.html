@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A Road Under Taken — Corelli.com</title>
+  <meta name="description" content="A Road Under Taken — a musing by Adam Corelli." />
+  <meta property="og:title" content="A Road Under Taken — Corelli.com" />
+  <meta property="og:description" content="A Road Under Taken — a musing by Adam Corelli." />
+  <meta property="og:type" content="article" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#fff;
+      --text:#222;
+      --max: 780px;
+      --radius: 10px;
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      background: var(--page-bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    header.site-header{
+      background: var(--brand);
+      color:#fff;
+      padding: 2.4rem 0 0.6rem;
+      text-align: center;
+      border-bottom: 4px solid #e9ecef;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    header.site-header h1{
+      margin:0;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    header.site-header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header.site-header h1 a:hover,
+    header.site-header h1 a:focus{
+      text-decoration: underline;
+      outline: none;
+    }
+
+    header.site-header .banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px;
+      margin-top:12px;
+      background:transparent;
+      border-top:1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+    }
+    header.site-header .banner-nav a{
+      color:#fff;
+      font-size:1.04rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .15s, background .15s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: var(--max);
+      margin: 1.6rem auto 1.1rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    main.wrap{
+      max-width: var(--max);
+      margin: 0 auto 2rem;
+      padding: 0 20px;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 6px;
+    }
+    /* Reduced by about one-third vs the prior 92% width */
+    .hero img{
+      max-width: 560px;
+      width: 62%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      display:block;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #000;
+    }
+
+    article.card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2rem;
+    }
+    article.card p{
+      margin: 0 0 1rem 0;
+      color:#333;
+      font-size: 1.02rem;
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 1.2rem 0 0.9rem;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:700px){
+      article.card{ padding: 1rem; }
+      header.site-header h1{ font-size: 1.6rem; }
+      header.site-header .banner-nav{ gap: 1.1rem; padding:10px 0 12px; margin-top:8px; }
+      .hero img{ width: 88%; max-width: 520px; border-radius: 10px; }
+      .subhead .kicker{ font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1><a href="/index.html">Corelli.com</a></h1>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="/about.html">About</a>
+      <a href="/news-index.html">News Archive</a>
+      <a href="/gallery-lightbox.html">Photography</a>
+      <a href="/musings.html">Musings</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">A Road Under Taken</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="images/lrthighway.jpeg" alt="LRT / highway corridor" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="A Road Under Taken">
+      <p>When Doug Ford proposed building new underground lanes beneath Highway 401 through Toronto, my first reaction was disbelief. The 401 is already one of the widest and busiest highways in North America. The idea of tunnelling beneath it seemed extravagant, perhaps even fanciful. But the more I consider the concept, the more it feels less like a stunt and more like a bold piece of long-term infrastructure thinking — the kind of thinking that growing global cities eventually must embrace.</p>
+
+      <p>Highway 401 is not merely a commuter road; it is the economic spine of southern Ontario. It carries hundreds of thousands of vehicles daily — passenger cars, delivery vans, and long-haul trucks moving goods across the province and beyond. Traditional widening above ground is practically impossible through Toronto. The corridor is hemmed in by dense neighbourhoods, commercial districts, and vital infrastructure. Any surface expansion would require costly expropriation and years of disruptive construction.</p>
+
+      <p>Going underground changes the equation.</p>
+
+      <p>By tunnelling beneath the existing highway, Ontario could effectively create a second mobility layer without tearing apart the urban fabric above. Modern tunnel boring technology has advanced dramatically over the past two decades. Cities across Europe and Asia routinely undertake massive subterranean projects that once seemed unimaginable. If Toronto is serious about preparing for decades of population growth, it must think on that scale.</p>
+
+      <p>But simply adding more car lanes would be a missed opportunity. The real promise of an underground 401 lies in multimodal integration.</p>
+
+      <p>Imagine dedicating two of those underground corridors to fast light rail transit. A high-speed LRT running parallel to the 401 corridor could connect Toronto directly to Kingston, Ottawa, Kitchener, or Barrie with speed and reliability unimpeded by surface congestion. While such distances might traditionally call for regional rail, a tunnelled right-of-way offers flexibility. An electrified rapid line beneath the 401 could become a backbone for intercity transit, offering commuters and travellers a viable alternative to driving.</p>
+
+      <p>Separating vehicle types is another transformative possibility. One chronic cause of congestion on the 401 is the mixing of long-haul transport trucks with commuter traffic. By dedicating certain underground lanes exclusively to commercial trucks, Ontario could dramatically improve traffic flow and safety. Freight would move more predictably, commuters would experience fewer bottlenecks, and accident rates could decline.</p>
+
+      <p>Environmental considerations also deserve serious attention. Counterintuitively, tunnels may offer pollution-control advantages. Instead of dispersing emissions across a broad urban corridor, underground ventilation systems can capture and filter a significant portion of vehicle exhaust before it is released. With proper carbon capture integration and electrification incentives, tunnel lanes could become part of a broader climate strategy rather than simply an expansion of fossil-fuel infrastructure.</p>
+
+      <p>There is also the intriguing question of where all that excavated earth would go. A mega-project of this scale would generate millions of cubic metres of soil. Rather than treating it as waste, Toronto could use it strategically. One imaginative application would be expanding Billy Bishop Toronto City Airport on the Toronto Islands. Carefully engineered land reclamation could increase operational flexibility and economic capacity at an airport uniquely positioned beside downtown. While such a move would spark debate, it underscores how integrated infrastructure planning can unlock multiple benefits from a single project.</p>
+
+      <p>Extending portions of the tunnel network toward the downtown core could further relieve pressure on the Gardiner Expressway and local arterial roads. Instead of funnelling all regional traffic to surface chokepoints, underground arteries could distribute vehicles more efficiently, reducing gridlock at critical entry points.</p>
+
+      <p>Of course, cost would be enormous. Tunnelling beneath an active superhighway through a dense city would demand precision engineering, robust safety systems, and political resolve. Yet the alternative — perpetual congestion, economic drag, and incremental patchwork fixes — carries its own price. As well, the enormous demand created by such a project would assist Ontario's economy as it recalibrates to new trade realities.</p>
+
+      <p>Toronto is approaching the scale where incrementalism no longer suffices. The city and the broader Greater Golden Horseshoe are projected to grow substantially over the coming decades. Infrastructure built in the 1950s and 60s cannot shoulder 21st-century demands without reinvention.</p>
+
+      <p>What initially sounded like a fantastical idea may, in fact, be an invitation to think bigger. An underground expansion of Highway 401 could become more than additional lanes. It could serve as a freight corridor, a rapid transit spine, an environmental innovation project, and even a catalyst for broader urban transformation.</p>
+
+      <p>In a province that often debates infrastructure in cautious, piecemeal terms, the proposal challenges us to imagine something audacious. Whether or not it proceeds exactly as envisioned, the underlying principle is sound: if we are going to build, let us build for the century ahead.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
