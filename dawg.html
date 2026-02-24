@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>If you could read my mind — Corelli.com</title>
+  <meta name="description" content="A musing about the ‘Thought Collar’—and what we might learn if dogs could speak their minds." />
+  <meta property="og:title" content="If you could read my mind — Corelli.com" />
+  <meta property="og:description" content="A musing about the ‘Thought Collar’—and what we might learn if dogs could speak their minds." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/dawgdream.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    header.site-header{
+      background:var(--brand);
+      color:#fff;
+      padding:2.4rem 0 0.6rem;
+      text-align:center;
+      border-bottom:4px solid #e9ecef;
+      box-shadow:0 2px 6px rgba(0,0,0,0.04);
+    }
+    header.site-header h1{
+      margin:0;
+      font-size:2.4rem;
+      font-weight:700;
+      line-height:1;
+      letter-spacing:0.01em;
+    }
+    header.site-header h1 a{ color:#fff; text-decoration:none; }
+    header.site-header h1 a:hover,
+    header.site-header h1 a:focus{ text-decoration:underline; outline:none; }
+
+    header.site-header .banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px 0;
+      margin-top:12px;
+      border-top:1px solid rgba(255,255,255,0.06);
+      flex-wrap:wrap;
+    }
+    header.site-header .banner-nav a{
+      color:#fff;
+      font-size:1.04rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+      transition:color .15s, background .15s;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align:center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    /* Image sizing: original (larger) version */
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 86%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:700px){
+      header.site-header h1{ font-size:1.6rem; }
+      header.site-header .banner-nav{ gap:1.1rem; padding:10px 0 12px; margin-top:10px; }
+      header.site-header .banner-nav a{ font-size:0.9rem; }
+      .subhead .kicker{ font-size:1.15rem; }
+      .hero img{ width: 92%; max-width: 560px; border-radius: 10px; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1><a href="/index.html">Corelli.com</a></h1>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="/about.html">About</a>
+      <a href="/news-index.html">News Archive</a>
+      <a href="/gallery-lightbox.html">Photography</a>
+      <a href="/musings.html" aria-current="page">Musings</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">If you could read my mind</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="images/dawgdream.jpeg" alt="Dreaming dog" loading="lazy" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="Musing">
+      <section id="article-body">
+        <p>The breakthrough came, appropriately enough, during a game of fetch.</p>
+
+        <p>A team of neuroscientists unveiled the Canine Cognitive Translator—nicknamed the “Thought Collar”—a sleek device that allows humans to read a dog’s mind with startling clarity. For the first time in history, we could move beyond guessing what “woof” meant and access the full inner monologue. The results were paws-itively mind-blowing.</p>
+
+        <p>“We always suspected dogs were thinking complex thoughts,” said lead researcher Dr. Felicity Barker. “We just didn’t realize how many of them were about sandwiches.”</p>
+
+        <p>The technology works by translating neural tail-wags into human language, rendering each bark into a complete sentence. Early test runs revealed that dogs possess not only consciousness and emotion, but a sophisticated ethos centered on loyalty, fairness, and the immediate location of the nearest squirrel.</p>
+
+        <p>Once the collar went public, society braced itself. After all, humans have had millennia to complain about the weather. What would dogs say with a direct line to the podium?</p>
+
+        <p>The answer: quite a lot.</p>
+
+        <p>Within days, a comprehensive manifesto emerged, now known as The Treatise. It outlined a detailed list of canine requests for societal reform. At the top: “Universal Belly Rub Access.” The second: “Mandatory Open-Window Legislation in All Moving Vehicles.” Third: “The Immediate Reclassification of Vacuum Cleaners as Hostile Entities.”</p>
+
+        <p>The document was surprisingly articulate. “We seek not dominance,” it read, “but co-paw-ticipation.” Dogs asked for expanded green spaces (“More parks, fewer parking lots”), a standardized five-second rule for dropped food (“Seven is acceptable in emergencies”), and the formal recognition of Good Boy and Good Girl as honorary titles.</p>
+
+        <p>Perhaps most striking was their ethical framework. Dogs advocated for what they called “The Golden Retriever Rule”: Do unto others as you would have them do unto you, unless they are holding bacon, in which case act swiftly.</p>
+
+        <p>Human reactions were mixed. Some hailed it as the dawning of a new era of interspecies transparency. Others were uneasy about finally knowing what their pets truly thought. (One Labrador’s unfiltered review of his owner’s singing was described as “brutally arf-ful.”)</p>
+
+        <p>Corporate America scrambled to adapt. Pet food companies rebranded recipes after learning that “beef-flavored” was considered “emotionally misleading.” Furniture retailers introduced “Pre-Distressed Sofas” to align with canine design preferences. The stock market saw a bull run—briefly interrupted by a confused beagle.</p>
+
+        <p>Politicians convened hearings to assess the demands. A senator remarked, “We must take these proposals seriously. The dogs have made compelling arf-guments.” A rival countered that the agenda was too ruff around the edges. Debate continued, but approval ratings for dogs remained sky-high. After all, it’s difficult to impugn motives when the motive is clearly “more snacks for everyone.”</p>
+
+        <p>The most profound revelation, however, was not about treats or toys. It was about love. The collars confirmed what many suspected: that dogs think about their humans constantly, with a depth of devotion that borders on tail-spinning poetry. Even their complaints were wrapped in affection. “Why do you leave every morning?” one translated thought read. “I will wait here. I will always wait.”</p>
+
+        <p>In the end, the Thought Collar didn’t just open a channel—it opened hearts. Society began to adopt more of the canine code: greet loved ones enthusiastically, forgive quickly, nap often, and never pass up the chance to chase joy.</p>
+
+        <p>As one bulldog philosopher succinctly transmitted, “Life is short. Fetch what matters.”</p>
+
+        <p>And for once, humanity was happy to sit, stay, and listen.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
