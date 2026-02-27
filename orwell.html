@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Technology and Democracy — Corelli.com</title>
+  <meta name="description" content="A musing on how technology reshapes democracy through access, surveillance, and behavior." />
+  <meta property="og:title" content="Technology and Democracy — Corelli.com" />
+  <meta property="og:description" content="A musing on how technology reshapes democracy through access, surveillance, and behavior." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/orwell.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    header.site-header{
+      background:var(--brand);
+      color:#fff;
+      padding:2.4rem 0 0.6rem;
+      text-align:center;
+      border-bottom:4px solid #e9ecef;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    header.site-header h1{
+      margin:0;
+      font-size:2.4rem;
+      font-weight:700;
+      line-height:1;
+      letter-spacing:0.01em;
+    }
+    header.site-header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header.site-header h1 a:hover,
+    header.site-header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    header.site-header .banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px 0;
+      margin-top:12px;
+      background:transparent;
+      border-top:1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+    }
+    header.site-header .banner-nav a{
+      color:#fff;
+      font-size:1.04rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .15s, background .15s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.6rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    /* Image at ~half page width */
+    .hero{
+      text-align:center;
+      padding: 10px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      width: 50%;
+      max-width: 420px;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:700px){
+      header.site-header h1{ font-size:1.6rem; }
+      header.site-header .banner-nav{ gap:1.1rem; padding:10px 0 12px; margin-top:10px; }
+      header.site-header .banner-nav a{ font-size:0.9rem; }
+      .subhead .kicker{ font-size:1.15rem; }
+
+      .hero img{
+        width: 78%;
+        max-width: 520px;
+        border-radius: 10px;
+      }
+
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1><a href="/index.html">Corelli.com</a></h1>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="/about.html">About</a>
+      <a href="/news-index.html">News Archive</a>
+      <a href="/gallery-lightbox.html">Photography</a>
+      <a href="/musings.html" aria-current="page">Musings</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">Technology and Democracy</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/orwell.jpeg" alt="Orwell" loading="lazy" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="Technology and Democracy">
+      <section id="article-body">
+        <p>There was a time when finding someone was simple: you reached for the phone book. A thick, communal directory sat in nearly every home, listing names, addresses, and numbers in plain black ink. Privacy was thinner then in one sense, but freedom felt more tangible in another. You could walk to a payphone, drop in a coin, and place a call that left little trace. The infrastructure of everyday life did not constantly log your movements, your associations, or your curiosities.</p>
+
+        <p>Today, paradoxically, in an age of infinite information, certain searches feel harder. The web shapes what we see. Algorithms curate, elevate, bury, and filter. Results vary depending on location, profile, history, and even inferred preferences. Meanwhile, digital gatekeepers maintain block lists, moderation systems, and automated safeguards. The digital world is vast, yet it is also curated—sometimes invisibly.</p>
+
+        <p>Technology has profoundly reshaped democracy and freedom in at least three major ways: access, surveillance, and behavior.</p>
+
+        <p>First, access. The internet has democratized speech in ways unimaginable in the phone-book era. A citizen can publish ideas globally without printing presses or broadcast licenses. Movements can organize rapidly. Corruption can be documented and shared instantly. Information once hoarded by elites now circulates widely. In this sense, technology has dramatically expanded democratic participation.</p>
+
+        <p>Second, surveillance. The same networks that enable speech also record it. Phone booths have vanished. Digital calls, messages, and transactions create metadata trails. Governments and corporations possess analytical capacities that would have seemed fantastical decades ago. Cameras blanket cities. Location data accumulates. The infrastructure of connection doubles as an infrastructure of monitoring.</p>
+
+        <p>This shift creates a tension. Freedom has historically included the possibility of anonymity—the ability to explore ideas, make mistakes, or even dissent without permanent record. When nearly every action leaves a trace, behavior subtly changes. Self-censorship becomes more likely. Citizens may hesitate before expressing controversial views, knowing that digital memory is long and searchable.</p>
+
+        <p>Third, behavior and morality. Here the nostalgia becomes more complex.</p>
+
+        <p>It is tempting to believe that in the “old days,” people behaved well because they possessed a shared moral compass. They could have misbehaved anonymously—but chose not to. Today, by contrast, technology constrains wrongdoing not through virtue but through detection. Cameras deter theft. Tracking deters fraud. Monitoring deters abuse.</p>
+
+        <p>But was the past truly so virtuous? Or were its harms simply less visible and less documented?</p>
+
+        <p>Crime rates in many Western countries were significantly higher in the 1970s and 1980s than they are today. Domestic violence, discrimination, corruption, and abuse often flourished behind closed doors, shielded not by moral restraint but by social silence. The absence of digital records did not necessarily produce moral strength; it often produced unreported harm.</p>
+
+        <p>At the same time, there is something important in the concern. Moral development does require freedom. If individuals never face the possibility of choosing wrongly, they cannot meaningfully choose rightly. A society that eliminates all opportunity for misconduct through surveillance risks weakening internal moral reasoning. Ethics becomes outsourced to systems. “I don’t steal because I’ll be caught” is different from “I don’t steal because it is wrong.”</p>
+
+        <p>Democracy itself depends on citizens who internalize norms of restraint, respect, and civic responsibility. Technology can enforce compliance, but it cannot cultivate virtue. Algorithms can remove harmful speech, but they cannot teach discernment. Monitoring can prevent some wrongdoing, but it cannot produce character.</p>
+
+        <p>The key question, then, is balance.</p>
+
+        <p>Technology has strengthened democracy by widening participation and exposing injustice. It has also complicated freedom by increasing surveillance and centralizing informational power. It may reduce certain kinds of misconduct while creating new forms—cybercrime, disinformation, algorithmic manipulation—that were previously impossible.</p>
+
+        <p>The nostalgic sense that freedom was once purer is partly myth and partly insight. The past offered more anonymity, but also more invisibility of harm. The present offers more transparency, but also more tracking.</p>
+
+        <p>Ultimately, democracy does not rest on technology alone—neither on phone books nor on fiber optics. It rests on a culture of liberty shaped by institutions, norms, and moral education. The challenge of our era is not to abandon technological progress, but to ensure that it enhances human agency rather than replacing it. We must design systems that protect privacy, preserve room for moral choice, and maintain accountability without suffocating autonomy.</p>
+
+        <p>Freedom has always been fragile. Technology has not ended it—but it has changed the terrain on which it must be defended.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
