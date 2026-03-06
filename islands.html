@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toronto Island Reimagined — Corelli.com</title>
+  <meta name="description" content="A musing on reimagining Toronto’s Islands—preserving Ward’s and Hanlan’s while exploring a bold new Centre Island skyline and civic district." />
+  <meta property="og:title" content="Toronto Island Reimagined — Corelli.com" />
+  <meta property="og:description" content="A musing on reimagining Toronto’s Islands—preserving Ward’s and Hanlan’s while exploring a bold new Centre Island skyline and civic district." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/skyline.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    header.site-header{
+      background:var(--brand);
+      color:#fff;
+      padding:2.4rem 0 0.6rem;
+      text-align:center;
+      border-bottom:4px solid #e9ecef;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    header.site-header h1{
+      margin:0;
+      font-size:2.4rem;
+      font-weight:700;
+      line-height:1;
+      letter-spacing:0.01em;
+    }
+    header.site-header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header.site-header h1 a:hover,
+    header.site-header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    header.site-header .banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.25rem;
+      padding:10px 0 18px 0;
+      margin-top:12px;
+      background:transparent;
+      border-top:1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+    }
+    header.site-header .banner-nav a{
+      color:#fff;
+      font-size:1.04rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .15s, background .15s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    header.site-header .banner-nav a:hover,
+    header.site-header .banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 86%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:700px){
+      header.site-header h1{ font-size:1.6rem; }
+      header.site-header .banner-nav{ gap:1.1rem; padding:10px 0 12px; margin-top:10px; }
+      header.site-header .banner-nav a{ font-size:0.9rem; }
+      .subhead .kicker{ font-size:1.15rem; }
+      .hero img{ width: 92%; max-width: 560px; border-radius: 10px; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1><a href="/index.html">Corelli.com</a></h1>
+
+    <nav class="banner-nav" aria-label="Site navigation">
+      <a href="/about.html">About</a>
+      <a href="/news-index.html">News Archive</a>
+      <a href="/gallery-lightbox.html">Photography</a>
+      <a href="/musings.html" aria-current="page">Musings</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">Toronto Island Reimagined</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/skyline.jpeg" alt="Toronto skyline" loading="lazy" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="Toronto Island Reimagined">
+      <section id="article-body">
+        <p>Few places are as cherished by Torontonians as the Toronto Islands. Just a short ferry ride from downtown, the islands feel like a different world—quiet, breezy, and almost timeless. Generations of residents and visitors have treated them as a refuge from the dense urban core across the harbour. Because of that, any suggestion of development has historically been met with fierce resistance.</p>
+
+        <p>Yet Toronto itself has changed dramatically. The city has grown into a global metropolis whose skyline—dominated by landmarks like the CN Tower—is recognized around the world. Population growth, housing pressure, and the demand for new civic infrastructure are forcing the city to rethink where and how it grows. In that context, it may be time to revisit the long-standing assumption that the Toronto Islands must remain almost entirely untouched.</p>
+
+        <p>The islands are not a single uniform place. They are a mosaic of communities and landscapes, each with a distinct identity. At the eastern end lies Ward’s Island, home to a small but beloved residential community whose cottages and gardens feel more like a lakeside village than part of Canada’s largest city. In the middle sits Centre Island, a family-friendly destination featuring green parkland and the well-known Centreville Amusement Park. To the west stretches the more natural landscape of Hanlan’s Point, a beach and nature area known for its wide sandy shoreline and open spaces.</p>
+
+        <p>At the far western tip sits Billy Bishop Toronto City Airport, already a key piece of urban infrastructure that connects Toronto to cities across North America.</p>
+
+        <p>Because these areas serve such different purposes, a more nuanced approach to the islands may be possible—one that protects what makes them special while carefully introducing new development where it could benefit the entire city.</p>
+
+        <p>Imagine a bold but thoughtful plan beginning at the western end of the islands. A permanent road connection—perhaps paired with transit infrastructure—could link the mainland to the island chain near Billy Bishop Airport. Such a connection would not only improve access to the airport but could also support a carefully expanded aviation facility, allowing Toronto to better accommodate regional air travel without further crowding the mainland.</p>
+
+        <p>From there, development could focus primarily on Centre Island, leaving Ward’s Island and Hanlan’s Point largely protected. The quiet residential character of Ward’s Island could remain untouched, preserving its rare village-like atmosphere within the city. Hanlan’s Point could continue to function as a natural and recreational space, maintaining its beaches, wildlife habitats, and open landscapes.</p>
+
+        <p>Centre Island, however, offers a remarkable opportunity.</p>
+
+        <p>Rather than simply an amusement park and picnic grounds, it could evolve into one of the most visually spectacular urban districts in the world. Picture a graceful collection of modern skyscrapers rising along the island’s edge, facing north across the harbour toward downtown Toronto. The view would be extraordinary: two skylines facing each other across the water, forming a sweeping horseshoe around the harbour.</p>
+
+        <p>The effect would be breathtaking. Toronto would become one of the rare cities where the skyline is experienced as a dramatic panoramic composition rather than a single wall of buildings.</p>
+
+        <p>Beyond aesthetics, such development could help relieve intense pressure on downtown land. Toronto’s core is rapidly filling with residential towers and commercial projects. By creating a second high-density district on Centre Island, the city could distribute growth more evenly while maintaining the vitality of the harbour.</p>
+
+        <p>This new district could also host civic and cultural infrastructure that Toronto increasingly needs. A new ballpark, major performance venues, convention facilities, or cultural institutions could find a natural home there—surrounded by water, parks, and stunning views.</p>
+
+        <p>Importantly, this transformation could create benefits for the existing city as well. If facilities such as the Rogers Centre were eventually replaced by newer venues on the islands, valuable downtown land could be reclaimed for parkland and public space. Toronto’s core has long struggled with a shortage of green space; converting large parcels into parks could dramatically improve the urban environment.</p>
+
+        <p>Of course, any proposal involving the Toronto Islands would require immense care, public debate, and environmental sensitivity. The islands are beloved precisely because they provide an escape from the city’s intensity. Any development must respect that history and protect the elements that make the islands unique.</p>
+
+        <p>But cities evolve. What once seemed unthinkable sometimes becomes the foundation of a bold new chapter. With thoughtful planning, Toronto could preserve the tranquility of Ward’s Island, the natural beauty of Hanlan’s Point, and the family charm of Centre Island—while also creating a visionary new waterfront skyline that reflects the ambitions of a growing global city.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
