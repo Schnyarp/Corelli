@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>What the puck, eh? — Corelli.com</title>
+  <meta name="description" content="A topical musing on Canada’s long Stanley Cup drought: the math, the near-misses, and the structural and human factors that keep the door just barely closed." />
+  <meta property="og:title" content="What the puck, eh? — Corelli.com" />
+  <meta property="og:description" content="A topical musing on Canada’s long Stanley Cup drought: the math, the near-misses, and the structural and human factors that keep the door just barely closed." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/hockey-support.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* ===== Header ribbon (matches index.html approach) ===== */
+    header{
+      background: transparent;
+      text-align: center;
+      padding: 1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display: block;
+      margin: 0 auto;
+      background: var(--brand);
+      color: #fff;
+      padding: 1.05rem 2.1rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 22px rgba(32, 93, 146, 0.22);
+      width: min(calc(100vw - 40px), 980px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 64px;
+      height: 100%;
+      background: var(--page-bg);
+      pointer-events: none;
+    }
+    .ribbon::before{
+      left: 0;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+    .ribbon::after{
+      right: 0;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    header h1{
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin: 0;
+      padding: 0 0.6rem;
+      line-height: 1.05;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-divider-white{
+      height: 2px;
+      background: #fff;
+      margin-top: 14px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    /* ===== Nav (silver bar, matches index.html) ===== */
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background: var(--silver-bar);
+      border-bottom: 1px solid var(--silver-border);
+      flex-wrap: wrap;
+    }
+
+    nav a{
+      color: var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav a:hover{
+      background:#fff;
+      color: var(--brand);
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 86%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    .inline-hero{
+      text-align:center;
+      margin: 1.6rem 0 0.25rem;
+    }
+    .inline-hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 86%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:980px){
+      header h1{ font-size:1.9rem; }
+      .ribbon{
+        width: min(calc(100vw - 40px), 900px);
+        padding: 0.95rem 1.6rem;
+      }
+      .ribbon::before,
+      .ribbon::after{ width:56px; }
+    }
+
+    @media (max-width:700px){
+      nav{ gap:1.2rem; }
+      .subhead .kicker{ font-size:1.15rem; }
+      .hero img, .inline-hero img{ width: 92%; max-width: 560px; border-radius: 10px; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      .ribbon{
+        width: calc(100vw - 24px);
+        padding: 0.85rem 1.25rem;
+      }
+      .ribbon::before,
+      .ribbon::after{ width:44px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="ribbon" role="banner" aria-label="Corelli.com site banner">
+      <h1>Corelli.com</h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav aria-label="Site navigation">
+    <a href="about.html">About</a>
+    <a href="news-index.html">News Archive</a>
+    <a href="london-punks.html">Photography</a>
+    <a href="musings.html">Topical</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">What the puck, eh?</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/hockey-support.jpeg" alt="Hockey supporters" loading="lazy" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="What the puck, eh?">
+      <section id="article-body">
+        <p>It began, as these things often do, with a number that didn’t quite sit right.</p>
+
+        <p>On paper, the math was simple. For much of the modern era, Canada has had roughly 7 teams in a 30–32 team league—about 20–23% of the NHL. If every team were equal, you would expect a Canadian team to win the Stanley Cup roughly once every 4 or 5 years.</p>
+
+        <p>And yet, the last Canadian winner remains the Montreal Canadiens in 1993.</p>
+
+        <p>More than three decades have passed.</p>
+
+        <p>At first glance, it feels impossible. Or at least deeply improbable.</p>
+
+        <p>Imagine flipping a coin where “heads” represents a Canadian team winning. But this is no ordinary coin—it’s weighted so that heads comes up only about 20% of the time. Even then, over 31 flips (the number of Stanley Cups awarded since 1993, excluding the 2005 lockout), you would expect to see several heads.</p>
+
+        <p>Instead, you get none.</p>
+
+        <p>Statistically, under a simple equal-chance model, the probability of that happening lands somewhere between 1 in 850 and 1 in 2,100, depending on how precisely you model league size and expansion over time.</p>
+
+        <p>Rare, but not impossible.</p>
+
+        <p>Like drawing a particular card from a shuffled deck again and again—and somehow missing it every time.</p>
+
+        <p>But the story becomes more interesting when you move beyond the math.</p>
+
+        <p>Because hockey is not a coin flip.</p>
+
+        <p>Over those same decades, Canadian teams have not been absent from contention. The Vancouver Canucks reached Game 7 of the Final in 1994 and again in 2011. The Calgary Flames came within a disputed goal in 2004. The Edmonton Oilers pushed to Game 7 in 2006. The Ottawa Senators made the Final in 2007. Most recently, the Montreal Canadiens surprised the league with a Finals run in 2021.</p>
+
+        <p>Canada has knocked on the door.</p>
+
+        <p>Repeatedly.</p>
+
+        <p>And each time, the door has remained closed.</p>
+
+        <p>So why?</p>
+
+        <p>Part of the answer lies in structural realities. Since the introduction of the salary cap in 2005, teams operate within tighter financial constraints. Some argue that Canadian markets face subtle disadvantages—currency differences, tax structures, and intense media scrutiny that can make rebuilding cycles more difficult.</p>
+
+        <p>Others point to randomness.</p>
+
+        <p>The Stanley Cup playoffs are famously volatile. A hot goaltender, a timely injury, a bounce off a post—small margins decide championships. Over time, even unlikely streaks can emerge from that chaos.</p>
+
+        <p>And then there is the distribution problem: while Canada has seven teams, the United States has twenty-five. The sheer weight of numbers tilts the baseline odds south of the border.</p>
+
+        <p>Still, the drought lingers as something more than just a statistical curiosity.</p>
+
+        <p>It has become a narrative.</p>
+
+        <p>Each spring, as the playoffs begin, there is a quiet, collective calculation. This could be the year. The odds reset. The math forgives the past.</p>
+
+        <p>And yet, as rounds pass, the same pattern tends to reassert itself.</p>
+
+        <p>Close—but not quite.</p>
+
+        <p>In the end, the numbers tell two stories at once.</p>
+
+        <p>One is mathematical: a low-probability streak, but well within the realm of chance.</p>
+
+        <p>The other is human: a sequence of near-misses, shaped by pressure, structure, and the unpredictable nature of sport.</p>
+
+        <p>Somewhere between those two lies the truth.</p>
+
+        <p>And, perhaps, the next Stanley Cup winner north of the border.</p>
+
+        <div class="inline-hero" aria-hidden="false">
+          <img src="/images/hockey.jpeg" alt="Hockey image" loading="lazy" />
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
