@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Will Not Create Classroom Zombies — Corelli.com</title>
+  <meta name="description" content="A topical essay on why AI won’t turn students into passive copy-pasters—and how, used well, it can strengthen critical thinking, curiosity, and judgment." />
+  <meta property="og:title" content="AI Will Not Create Classroom Zombies — Corelli.com" />
+  <meta property="og:description" content="A topical essay on why AI won’t turn students into passive copy-pasters—and how, used well, it can strengthen critical thinking, curiosity, and judgment." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/zombies.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* ===== Header ribbon (matches newer site style) ===== */
+    header{
+      background: transparent;
+      text-align: center;
+      padding: 1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display: block;
+      margin: 0 auto;
+      background: var(--brand);
+      color: #fff;
+      padding: 1.05rem 2.1rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 22px rgba(32, 93, 146, 0.22);
+      width: min(calc(100vw - 40px), 980px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 64px;
+      height: 100%;
+      background: var(--page-bg);
+      pointer-events: none;
+    }
+    .ribbon::before{
+      left: 0;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+    .ribbon::after{
+      right: 0;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    header h1{
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin: 0;
+      padding: 0 0.6rem;
+      line-height: 1.05;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline: none;
+    }
+
+    .header-divider-white{
+      height: 2px;
+      background: #fff;
+      margin-top: 14px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    /* ===== Nav (silver bar) ===== */
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background: var(--silver-bar);
+      border-bottom: 1px solid var(--silver-border);
+      flex-wrap: wrap;
+    }
+
+    nav a{
+      color: var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav a:hover{
+      background:#fff;
+      color: var(--brand);
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 73%; /* reduced from 86% (~15% narrower) */
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:980px){
+      header h1{ font-size:1.9rem; }
+      .ribbon{
+        width: min(calc(100vw - 40px), 900px);
+        padding: 0.95rem 1.6rem;
+      }
+      .ribbon::before,
+      .ribbon::after{ width:56px; }
+    }
+
+    @media (max-width:700px){
+      nav{ gap:1.2rem; }
+      .subhead .kicker{ font-size:1.15rem; }
+      .hero img{ width: 78%; max-width: 560px; border-radius: 10px; } /* keep reduced look on mobile too */
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      .ribbon{
+        width: calc(100vw - 24px);
+        padding: 0.85rem 1.25rem;
+      }
+      .ribbon::before,
+      .ribbon::after{ width:44px; }
+      .hero img{ width: 92%; } /* allow more width on very small screens */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="ribbon" role="banner" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/gallery-lightbox.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">AI Will Not Create Classroom Zombies</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/zombies.jpeg" alt="Classroom zombies illustration" loading="lazy" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="AI Will Not Create Classroom Zombies">
+      <section id="article-body">
+        <p>The rise of artificial intelligence in classrooms has triggered a familiar kind of anxiety. Educators warn that tools capable of generating essays, solving equations, and summarizing complex ideas may erode students’ ability to think critically. If a machine can do the work, what incentive remains for students to wrestle with ideas themselves?</p>
+
+        <p>It’s a reasonable concern—but it may be pointing in the wrong direction.</p>
+
+        <p>Rather than undermining critical thinking, AI has the potential to amplify it. The key distinction lies in how it is used. Like calculators, search engines, and even textbooks before them, AI tools can either shortcut thinking or deepen it. The outcome depends not on the technology itself, but on the expectations and structures educators build around it.</p>
+
+        <p>When used passively, AI can indeed become a crutch. A student who simply copies an AI-generated answer learns very little. But this is not a new problem. Students have long found ways to avoid effort—through copied homework, summary websites, or rote memorization without understanding. AI does not create this tendency; it simply makes it more visible.</p>
+
+        <p>More interesting is what happens when AI is used actively.</p>
+
+        <p>A curious student can now interrogate ideas in ways that were previously difficult or impossible. They can ask follow-up questions, request alternative explanations, challenge assumptions, and explore counterarguments instantly. AI can simulate a tutor, a debate partner, or a brainstorming collaborator—one that is available at any time and responsive to the student’s level of understanding.</p>
+
+        <p>In this context, AI becomes less of an answer machine and more of a thinking partner.</p>
+
+        <p>This shift suggests that the real task for educators is not to restrict AI, but to integrate it meaningfully. Assignments should evolve from asking for answers to demanding process. Students might be required to show how they used AI, critique its outputs, identify errors or biases, and refine its responses. Instead of hiding AI use, education should bring it into the open and make it part of the learning process itself.</p>
+
+        <p>Such an approach does more than preserve critical thinking—it strengthens it. Evaluating AI-generated content requires judgment, skepticism, and the ability to distinguish between surface plausibility and deeper truth. These are precisely the skills educators aim to cultivate.</p>
+
+        <p>Moreover, AI can ignite curiosity. When barriers to exploration are lowered, students are more likely to follow their questions further. A single query can lead to a chain of inquiry, each step building on the last. In this way, AI can transform learning from a static task into a dynamic conversation.</p>
+
+        <p>The history of education is, in part, a history of adapting to new tools. From the printing press to the internet, each innovation has sparked fears of intellectual decline—yet ultimately expanded human capacity.</p>
+
+        <p>AI is no different. The challenge is not to resist it, but to teach students how to think with it.</p>
+
+        <p>If that challenge is met, AI will not diminish education. It will deepen it.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
