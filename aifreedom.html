@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Don't Let Government Shackle AI — Corelli.com</title>
+  <meta name="description" content="A musing on the risks of regulating AI too early—and how heavy-handed rules can entrench incumbents and slow innovation." />
+  <meta property="og:title" content="Don't Let Government Shackle AI — Corelli.com" />
+  <meta property="og:description" content="A musing on the risks of regulating AI too early—and how heavy-handed rules can entrench incumbents and slow innovation." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/shackled.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* ===== Updated ribbon banner (matches other updated pages) ===== */
+    header{
+      background: transparent;
+      text-align: center;
+      padding: 1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display: block;
+      margin: 0 auto;
+      background: var(--brand);
+      color: #fff;
+      padding: 1.05rem 2.1rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 22px rgba(32, 93, 146, 0.22);
+      width: min(calc(100vw - 40px), 980px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 64px;
+      height: 100%;
+      background: var(--page-bg);
+      pointer-events: none;
+    }
+    .ribbon::before{
+      left: 0;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+    .ribbon::after{
+      right: 0;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    header h1{
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin: 0;
+      padding: 0 0.6rem;
+      line-height: 1.05;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline: none;
+    }
+
+    .header-divider-white{
+      height: 2px;
+      background: #fff;
+      margin-top: 14px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    /* ===== Nav (silver bar) ===== */
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background: var(--silver-bar);
+      border-bottom: 1px solid var(--silver-border);
+      flex-wrap: wrap;
+    }
+    nav.banner-nav a{
+      color: var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color: var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    /* Reduced image size by ~40% (desktop): width 86% -> ~52% */
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 52%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:980px){
+      header h1{ font-size:1.9rem; }
+      .ribbon{
+        width: min(calc(100vw - 40px), 900px);
+        padding: 0.95rem 1.6rem;
+      }
+      .ribbon::before,
+      .ribbon::after{ width:56px; }
+      nav.banner-nav{ gap:1.2rem; }
+    }
+
+    @media (max-width:700px){
+      .subhead .kicker{ font-size:1.15rem; }
+      /* Keep a nice presence on mobile; still smaller than before */
+      .hero img{ width: 72%; max-width: 420px; border-radius: 10px; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      header h1{ font-size:1.25rem; }
+      .ribbon{
+        width: calc(100vw - 24px);
+        padding: 0.85rem 1.25rem;
+      }
+      .ribbon::before,
+      .ribbon::after{ width:44px; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/gallery-lightbox.html">Photography</a>
+    <a href="/musings.html" aria-current="page">Musings</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">Don't Let Government Shackle AI</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/shackled.jpeg" alt="Shackled AI concept" loading="lazy" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="Don't Let Government Shackle AI">
+      <section id="article-body">
+        <p>The instinct to regulate artificial intelligence is understandable. Whenever a technology emerges that seems capable of transforming industries, cultures, and even human identity, governments feel compelled to step in. Yet there are profound risks in attempting to regulate AI too early, too broadly, or too aggressively.</p>
+
+        <p>First, it is important to recognize the political economy surrounding AI. Resistance to artificial intelligence is not arising in a vacuum. Many of the loudest calls for stringent controls come from vested interests—industries, professional guilds, and institutional actors who stand to be disrupted. Throughout history, transformative technologies have triggered similar reactions. The printing press unsettled scribes, the automobile threatened carriage makers, and the internet destabilized traditional media. In each case, incumbent interests sought protection. Regulation can become a vehicle for that protectionism, cloaked in the language of public safety or ethical concern. If policymakers are not careful, AI regulation risks becoming less about guarding society and more about insulating legacy systems from competition.</p>
+
+        <p>Second, heavy-handed regulation tends to create friction. Every compliance layer introduces cost, delay, and complexity. Startups—often the most creative and daring innovators—are particularly vulnerable. Large corporations can afford legal teams and regulatory strategists; small teams with breakthrough ideas often cannot. The result is paradoxical: regulation designed to tame “big AI” can entrench it, raising barriers to entry and reducing competition. That diminished competitive landscape ultimately harms users, who benefit most when innovation is rapid and diverse.</p>
+
+        <p>Third, regulation can erode user experience. AI systems improve through iteration, experimentation, and real-world feedback. Overly prescriptive rules may freeze models in particular forms or constrain their functionality in ways that limit usefulness. Creativity—whether in art, research, software development, or entrepreneurship—often flourishes in open environments. If developers must constantly navigate uncertain or shifting regulatory frameworks, innovation slows. The magical quality of AI—its ability to surprise, to synthesize, to generate novel connections—depends on a degree of freedom.</p>
+
+        <p>There is also the “can of worms” problem. Once governments begin defining permissible and impermissible uses, they enter a boundary-setting exercise with no obvious endpoint. Should regulation address bias? Safety? Intellectual property? Political persuasion? Employment displacement? Each area opens into another. Expanding definitions and overlapping mandates can produce a sprawling bureaucracy that attempts to anticipate every conceivable misuse. Yet no regulatory framework can perfectly predict how a rapidly evolving technology will be applied.</p>
+
+        <p>None of this suggests that AI should exist in a lawless vacuum. Existing laws—fraud, defamation, privacy protections, consumer protection statutes—already apply. The risk lies in building a new, rigid superstructure around a technology that is still unfolding. If history is any guide, societies benefit most when transformative tools are allowed to mature before being tightly constrained.</p>
+
+        <p>Artificial intelligence is not merely another product category; it is an enabling layer across nearly every field of human endeavour. Its promise lies in expansion, exploration, and experimentation. To shackle it prematurely would be to risk dimming one of the most powerful engines of creativity the modern age has yet produced.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
