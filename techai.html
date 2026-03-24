@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Technology And AI Creating The Future — Corelli.com</title>
+  <meta name="description" content="Technology and AI creating the future — stories and links curated by Adam Corelli." />
+  <meta property="og:title" content="Technology And AI Creating The Future — Corelli.com" />
+  <meta property="og:description" content="Technology and AI creating the future — stories and links curated by Adam Corelli." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/aibanner.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+
+      /* Soft yellow used as a “band” behind the title + content (NOT full width) */
+      --soft-yellow:#fbf6df;
+
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --radius: 10px;
+
+      /* “black bar” title strip */
+      --titlebar:#111;
+
+      --silver-bar:#eef1f4;
+      --silver-border:#d6dde5;
+      --nav-text:#111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* ===== Site ribbon header ===== */
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32,93,146,0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+    .ribbon::before{left:0;clip-path:polygon(0 0, 100% 50%, 0 100%);}
+    .ribbon::after{right:0;clip-path:polygon(100% 0, 0 50%, 100% 100%);}
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+    header h1 a{ color:#fff; text-decoration:none; }
+    header h1 a:hover,
+    header h1 a:focus{ text-decoration:underline; outline:none; }
+
+    .header-divider-white{
+      height:2px;
+      background:#fff;
+      margin-top:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    /* ===== Nav bar ===== */
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background:var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+    nav.banner-nav a{
+      color:var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .15s, background .15s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    /*
+      ===== Narrow yellow “panel” (not full width) =====
+      This is the effect you described: yellow is a tight border/panel similar to the
+      side margins used by the top ribbon (i.e., centered band with page showing on sides).
+    */
+    .section-shell{
+      max-width: min(calc(100vw - 40px), 980px);
+      margin: 14px auto 0;
+      padding: 0 20px;
+    }
+    .section-panel{
+      background: var(--soft-yellow);
+      border-radius: 14px;
+      padding: 14px 14px 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    }
+
+    .section-titlebar{
+      background: var(--titlebar);
+      color:#fff;
+      border-radius: 10px;
+      padding: 1.0rem 1.1rem;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+      text-align:center;
+    }
+    .section-titlebar h2{
+      margin:0;
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    .section-hero{
+      text-align:center;
+      margin-top: 12px;
+    }
+    .section-hero img{
+      display:block;
+      margin:0 auto;
+      width:min(920px, 92%);
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 12px 34px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    /* ===== Placeholder “story blurbs” container (inside yellow panel) ===== */
+    .blurb-wrap{
+      margin-top: 14px;
+      padding: 0 6px;
+    }
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow:0 6px 18px rgba(44,62,80,0.06);
+      padding: 1.6rem 1.6rem 1.8rem;
+    }
+    .placeholder{
+      color:#556;
+      margin:0;
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+      background: transparent;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav{ gap:1.2rem; }
+      .section-titlebar h2{ font-size: 1.35rem; }
+      .section-panel{ padding: 12px 12px 16px; }
+    }
+    @media (max-width:520px){
+      header h1{ font-size:1.25rem; }
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+      .section-shell{ padding: 0 14px; }
+      .section-panel{ padding: 10px 10px 14px; border-radius: 12px; }
+      .card{ padding: 1.15rem 1rem 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/gallery-lightbox.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <main class="section-shell" role="main" aria-label="Technology and AI section">
+    <section class="section-panel">
+      <div class="section-titlebar">
+        <h2>Technology And AI Creating The Future</h2>
+      </div>
+
+      <div class="section-hero" aria-hidden="false">
+        <img src="images/aibanner.jpeg" alt="Technology and AI banner" loading="lazy" />
+      </div>
+
+      <div class="blurb-wrap" aria-label="Technology and AI story blurbs (coming soon)">
+        <div class="card">
+          <p class="placeholder">Story blurbs will go here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
