@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Early Mass Media — Caveman Times — Corelli.com</title>
+  <meta name="description" content="Caveman Times — early mass media editions. All the news that's fit to chesel!" />
+  <meta property="og:title" content="Early Mass Media — Caveman Times — Corelli.com" />
+  <meta property="og:description" content="Caveman Times — early mass media editions. All the news that's fit to chesel!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/caveman.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#fff;
+      --text:#222;
+      --max:980px;
+      --radius:10px;
+
+      /* News Archive yellow */
+      --soft-yellow:#fff8df;
+      --soft-yellow-border:#f1e4b8;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: var(--page-bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding:0 18px 60px;
+      line-height:1.6;
+    }
+
+    /* ===== Ribbon banner (matches news-index.html) ===== */
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32, 93, 146, 0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+    .ribbon::before{left:0;clip-path:polygon(0 0, 100% 50%, 0 100%);}
+    .ribbon::after{right:0;clip-path:polygon(100% 0, 0 50%, 100% 100%);}
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+    header h1 a{ color:#fff; text-decoration:none; }
+    header h1 a:hover, header h1 a:focus{ text-decoration:underline; outline:none; }
+
+    .header-divider-white{
+      height:2px;
+      background:#fff;
+      margin-top:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    /* ===== Nav on silver bar ===== */
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background: var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+
+    nav.banner-nav a{
+      color: var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    /* ===== Yellow panel that contains black bar + editions ===== */
+    .caveman-panel{
+      max-width: calc(var(--max) + 40px);
+      margin: 14px auto 0;
+      padding: 10px 20px 18px;
+      background: var(--soft-yellow);
+      border: 1px solid var(--soft-yellow-border);
+      border-radius: 12px;
+      box-shadow: 0 10px 22px rgba(44, 62, 80, 0.06);
+    }
+
+    .title-wrap{
+      max-width:var(--max);
+      margin:0 auto 10px;
+      padding:0;
+    }
+    .section-title-bar{
+      display:block;
+      background:#000;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:0;
+      width:100%;
+      text-align:center;
+    }
+    .section-title-bar span{
+      font-weight:800;
+      letter-spacing:0.02em;
+    }
+
+    .intro{
+      max-width:820px;
+      margin: 0.6rem auto 1.2rem;
+      color:#333;
+      font-size:1.03rem;
+      padding:0 20px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .edition{
+      margin: 0 0 2rem 0;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 6px;
+    }
+    .hero img{
+      max-width: 820px;
+      width: 74%; /* reduced by ~20% from 92% */
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      display:block;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px solid #000;
+      object-fit: cover;
+    }
+
+    .caption{
+      text-align:center;
+      color: #333;
+      font-size: 1.02rem;
+      margin: 10px 0 0 0;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    footer.site-footer{
+      max-width:var(--max);
+      margin: 26px auto 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav { gap:1.2rem; padding:0.45rem 0; }
+      .caveman-panel{ padding: 10px 14px 14px; }
+      .intro{ padding: 0 14px; }
+      .hero img{ width: 78%; }
+    }
+    @media (max-width:520px){
+      header h1{font-size:1.25rem}
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+      .caveman-panel{ border-radius: 10px; }
+      .hero img{ width:100%; border-radius: 10px; } /* allow full width on very small screens */
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/gallery-lightbox.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <section class="caveman-panel" aria-label="Caveman Times panel">
+    <div class="title-wrap" aria-label="Page title">
+      <div class="section-title-bar" id="caveman-title">
+        <span>Early Mass Media</span>
+      </div>
+    </div>
+
+    <div class="intro">All the news that's fit to chesel!</div>
+
+    <main role="main" aria-label="Caveman Times editions">
+      <section class="edition" aria-label="Environment blamed for birth of ugly beings">
+        <div class="hero" aria-hidden="false">
+          <img src="images/cavehuman.jpeg" alt="Caveman Times edition: Environment blamed for birth of ugly beings" loading="lazy" />
+        </div>
+        <p class="caption">Environment blamed for birth of ugly beings</p>
+      </section>
+
+      <section class="edition" aria-label="Overworked Neanderthals turning to fast food">
+        <div class="hero" aria-hidden="false">
+          <img src="images/mccannibal.jpeg" alt="Caveman Times edition: Overworked Neanderthals turning to fast food" loading="lazy" />
+        </div>
+        <p class="caption">Overworked Neanderthals turning to fast food</p>
+      </section>
+
+      <section class="edition" aria-label="Death In The Puddle Of Life">
+        <div class="hero" aria-hidden="false">
+          <img src="images/caveman.jpeg" alt="Caveman Times edition: Death In The Puddle Of Life" loading="lazy" />
+        </div>
+        <p class="caption">Death In The Puddle Of Life</p>
+      </section>
+
+      <section class="edition" aria-label="The More Things Change, The More...">
+        <div class="hero" aria-hidden="false">
+          <img src="images/caveelect.jpeg" alt="Caveman Times edition: The More Things Change, The More..." loading="lazy" />
+        </div>
+        <p class="caption">The More Things Change, The More...</p>
+      </section>
+
+      <section class="edition" aria-label="The War To End All Wars">
+        <div class="hero" aria-hidden="false">
+          <img src="images/thag.jpeg" alt="Caveman Times edition: The War To End All Wars" loading="lazy" />
+        </div>
+        <p class="caption">The War To End All Wars</p>
+      </section>
+
+      <!-- New image placed below The War To End All Wars -->
+      <section class="edition" aria-label="The Technology Revolution Begins">
+        <div class="hero" aria-hidden="false">
+          <img src="images/wheel.jpeg" alt="Caveman Times edition: The Technology Revolution Begins" loading="lazy" />
+        </div>
+        <p class="caption">The Technology Revolution Begins</p>
+      </section>
+
+      <section class="edition" aria-label="She Sure Can Make The Bed Rock">
+        <div class="hero" aria-hidden="false">
+          <img src="images/cavebabe.jpeg" alt="Caveman Times edition: She Sure Can Make The Bed Rock" loading="lazy" />
+        </div>
+        <p class="caption">She Sure Can Make The Bed Rock</p>
+      </section>
+
+      <section class="edition" aria-label="Peace Through War">
+        <div class="hero" aria-hidden="false">
+          <img src="images/cavearms.jpeg" alt="Caveman Times edition: Peace Through War" loading="lazy" />
+        </div>
+        <p class="caption">Peace Through War</p>
+      </section>
+
+      <section class="edition" aria-label="The Rituals Of Dinner">
+        <div class="hero" aria-hidden="false">
+          <img src="images/cavediet.jpeg" alt="Caveman Times edition: The Rituals Of Dinner" loading="lazy" />
+        </div>
+        <p class="caption">The Rituals Of Dinner</p>
+      </section>
+
+      <section class="edition" aria-label="Art Brings Sophistication Home">
+        <div class="hero" aria-hidden="false">
+          <img src="images/artcave.jpeg" alt="Caveman Times edition: Art Brings Sophistication Home" loading="lazy" />
+        </div>
+        <p class="caption">Art Brings Sophistication Home</p>
+      </section>
+
+      <section class="edition" aria-label="Mime Demands Hearing">
+        <div class="hero" aria-hidden="false">
+          <img src="images/cavemime.jpeg" alt="Caveman Times edition: Mime Demands Hearing" loading="lazy" />
+        </div>
+        <p class="caption">Mime Demands Hearing</p>
+      </section>
+    </main>
+  </section>
+
+  <footer role="contentinfo" class="site-footer">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
