@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Back To The Future: Canada Should Revive Royal Commissions — Corelli.com</title>
+  <meta name="description" content="An argument for reviving Royal Commissions as a modern, independent, and publicly engaged tool to tackle Canada’s biggest challenges." />
+  <meta property="og:title" content="Back To The Future: Canada Should Revive Royal Commissions — Corelli.com" />
+  <meta property="og:description" content="An argument for reviving Royal Commissions as a modern, independent, and publicly engaged tool to tackle Canada’s biggest challenges." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/royal.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* ===== Ribbon banner (matches news-index.html / updated pages) ===== */
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32, 93, 146, 0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+    .ribbon::before{left:0;clip-path:polygon(0 0, 100% 50%, 0 100%);}
+    .ribbon::after{right:0;clip-path:polygon(100% 0, 0 50%, 100% 100%);}
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    .header-divider-white{
+      height:2px;
+      background:#fff;
+      margin-top:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    /* ===== Nav on silver bar (matches updated pages) ===== */
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background:var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+
+    nav.banner-nav a{
+      color:var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 52%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+    .hero .caption{
+      margin: 0.55rem auto 0;
+      max-width: 720px;
+      width: 52%;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav { gap:1.2rem; padding:0.45rem 0; }
+    }
+
+    @media (max-width:700px){
+      .subhead .kicker{ font-size:1.15rem; }
+      .hero img{ width: 55%; max-width: 560px; border-radius: 10px; }
+      .hero .caption{ width: 55%; max-width: 560px; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      header h1{font-size:1.25rem}
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+      .hero img{ width: 92%; }
+      .hero .caption{ width: 92%; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/gallery-lightbox.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">Back To The Future: Canada Should Revive Royal Commissions</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/royal.jpeg" alt="Royal Commission" loading="lazy" />
+    <div class="caption">A tool for long questions in a short-cycle age</div>
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="Back To The Future: Canada Should Revive Royal Commissions">
+      <section id="article-body">
+        <p>There was a time when Canada, faced with questions too large or complex for ordinary politics, turned to an extraordinary instrument: the Royal Commission. These bodies—independent, well-resourced, and patient by design—were tasked with stepping back from the immediacy of partisan debate to take a long, panoramic view. They conducted sweeping research, heard from citizens across the country, and produced reports that often shaped national policy for decades. From the Royal Commission on Bilingualism and Biculturalism to the Royal Commission on the Status of Women, their legacy is woven into the fabric of modern Canada.</p>
+
+        <p>Yet over time, the use of Royal Commissions has faded. Governments, increasingly driven by electoral cycles, media pressures, and the demand for rapid responses, have gravitated toward shorter reviews, expert panels, or internal task forces. These mechanisms are quicker and more controllable—but often narrower in scope. They rarely match the depth, independence, or public engagement that defined the commissions of old.</p>
+
+        <p>Today, Canada faces a convergence of challenges that feel tailor-made for the Royal Commission model. Consider trade. The country’s economic future is tied not only to its longstanding relationship with the United States, but also to shifting global alliances, supply chain realignments, and the uncertain trajectory of globalization. A comprehensive, forward-looking examination could explore how Canada positions itself in a world of economic fragmentation, technological competition, and geopolitical tension.</p>
+
+        <p>Resource extraction presents another arena of complexity. Canada is rich in natural resources, from energy to minerals critical for the green transition. But development is entangled with environmental imperatives, Indigenous rights, and regional economic disparities. A Royal Commission could provide a forum where these tensions are not merely managed, but deeply examined—where long-term national interests are weighed against immediate pressures, and where consensus might be built through transparency and inclusion.</p>
+
+        <p>Then there is artificial intelligence. The rapid rise of AI is not just a technological shift; it is a societal transformation. It touches labour markets, privacy, national security, culture, and even democratic institutions. While Canada has been a global leader in AI research, policy frameworks lag behind the pace of change. A Royal Commission on AI could ask foundational questions: What kind of AI economy does Canada want? How should benefits be distributed? What safeguards are necessary to protect citizens while fostering innovation?</p>
+
+        <p>The strength of the Royal Commission model lies not only in its outputs, but in its process. It invites participation from across society—academics, industry leaders, Indigenous communities, civil society organizations, and ordinary citizens. It creates a shared national conversation, one that can elevate public understanding and legitimacy in ways that closed-door policymaking cannot.</p>
+
+        <p>Critics may argue that Royal Commissions are slow, expensive, and out of step with a fast-moving world. There is truth in this. But speed is not always a virtue, particularly when grappling with structural, generational challenges. In fact, the absence of deep, deliberative processes may lead to policies that are reactive, fragmented, or short-lived.</p>
+
+        <p>Reimagining the Royal Commission for the 21st century need not mean simply reviving an old model unchanged. Modern commissions could integrate digital consultation tools, release interim findings, and operate with clearer timelines. They could be designed to balance depth with agility. But their core purpose—to provide independent, comprehensive, and publicly engaged analysis—remains as relevant as ever.</p>
+
+        <p>Canada stands at an inflection point. The forces reshaping its economy, environment, and society are profound and interconnected. In such moments, there is value in stepping back, in asking bigger questions, and in listening more broadly. The Royal Commission, once a hallmark of Canadian governance, may yet have a role to play—not as a relic of the past, but as a tool for navigating the future.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
