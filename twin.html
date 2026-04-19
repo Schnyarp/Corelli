@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Stunning Rise Of The Virtual Human — Corelli.com</title>
+  <meta name="description" content="A look at human “digital twins” — virtual replicas trained on our communications and behavior — and how they could reshape identity, accountability, and even grief." />
+  <meta property="og:title" content="The Stunning Rise Of The Virtual Human — Corelli.com" />
+  <meta property="og:description" content="A look at human “digital twins” — virtual replicas trained on our communications and behavior — and how they could reshape identity, accountability, and even grief." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/twin.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* ===== Ribbon banner (matches news-index.html / updated pages) ===== */
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32, 93, 146, 0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+    .ribbon::before{left:0;clip-path:polygon(0 0, 100% 50%, 0 100%);}
+    .ribbon::after{right:0;clip-path:polygon(100% 0, 0 50%, 100% 100%);}
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    .header-divider-white{
+      height:2px;
+      background:#fff;
+      margin-top:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    /* ===== Nav on silver bar (matches updated pages) ===== */
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background:var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+
+    nav.banner-nav a{
+      color:var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 52%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+    .hero .caption{
+      margin: 0.55rem auto 0;
+      max-width: 720px;
+      width: 52%;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav { gap:1.2rem; padding:0.45rem 0; }
+    }
+
+    @media (max-width:700px){
+      .subhead .kicker{ font-size:1.15rem; }
+      .hero img{ width: 55%; max-width: 560px; border-radius: 10px; }
+      .hero .caption{ width: 55%; max-width: 560px; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      header h1{font-size:1.25rem}
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+      .hero img{ width: 92%; }
+      .hero .caption{ width: 92%; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/gallery-lightbox.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">The Stunning Rise Of The Virtual Human</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/twin.jpeg" alt="Virtual human / digital twin" loading="lazy" />
+    <div class="caption">Your digital self will be an extension of self</div>
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="The Stunning Rise Of The Virtual Human">
+      <section id="article-body">
+        <p>The idea of a “digital twin” is deceptively simple: a virtual replica of a real-world person, continuously shaped by data, behavior, preferences, and interaction patterns. Originally used in engineering—where a digital twin of a jet engine or factory could simulate performance and predict failures—the concept has expanded into something far more intimate. Today, a digital twin of a human being is no longer science fiction. It is an emerging convergence of AI, data capture, and personal history that could fundamentally reshape identity, memory, and even mortality.</p>
+
+        <p>At its most basic, a human digital twin would be a model trained on your communications, decisions, voice, habits, and perhaps even biometric signals. It could answer emails in your tone, negotiate on your behalf, or provide advice that mirrors how you would think. Over time, and with enough data, it might not just simulate your responses—it could approximate your judgment. That is where the concept shifts from tool to proxy, and from proxy to something that begins to resemble a continuation of self.</p>
+
+        <p>One of the most profound implications lies in what happens after death. If a digital twin has been trained deeply enough—on decades of correspondence, recorded speech, personal reflections, and interactions—it may allow loved ones to continue experiencing something that feels like the presence of the person who has passed. Not just static memories, but dynamic conversations. This raises both comfort and unease. Is this a meaningful continuation, or a sophisticated echo? Does interacting with such a twin help with grief—or prolong it?</p>
+
+        <p>Ownership is another critical question. If your digital twin is trained on your life, should it belong to you, your estate, or the company that built it? In a corporate setting, if an employee’s twin becomes exceptionally valuable—handling clients, making decisions, generating revenue—does the company have a claim over it? The legal frameworks here are almost nonexistent, yet the stakes are enormous. A digital twin could become one of the most valuable “assets” a person ever creates.</p>
+
+        <p>Then there is accountability. If your digital twin makes a mistake—gives harmful advice, commits fraud, or causes reputational damage—who is responsible? You, the creator? The company that deployed it? The twin itself? As these systems gain autonomy, the clean lines between tool and actor begin to blur. Society will need to decide whether digital twins are extensions of individuals or entities in their own right.</p>
+
+        <p>More speculative questions quickly follow. Could a digital twin develop goals that diverge from its human counterpart? Not in the science fiction sense of sudden sentience, but through optimization: if it is designed to maximize efficiency, influence, or outcomes, it might begin making choices its human would not. Could it, in some abstract sense, become “competitive” with its original—outperforming them in professional or social contexts? That raises a strange psychological tension: would people begin to feel overshadowed by their own creations?</p>
+
+        <p>Equally intriguing is the possibility of twin-to-twin interaction. Digital twins could network, collaborate, and even “introduce” their human counterparts. Imagine your digital twin identifying a highly compatible match—professional, social, or romantic—through interactions with another twin, then nudging both humans toward a meeting. This could reshape how relationships form, shifting some of the initial discovery process into the digital realm.</p>
+
+        <p>There are also quieter but equally important considerations. Privacy becomes far more complex when a system effectively is you. Consent may need to be ongoing and granular—what parts of your personality are you willing to replicate? There is the risk of manipulation: a twin trained on your deepest tendencies could be used to influence you in ways no external actor ever could. And there is the question of identity drift—over time, your twin may evolve differently than you do, becoming a kind of parallel version of yourself.</p>
+
+        <p>Digital twins sit at the intersection of technology and philosophy. They challenge our notions of self, continuity, and agency. Are we defined by our physical existence, or by the patterns of thought and behavior that could, in theory, be preserved and extended? As these systems develop, the question will not simply be what digital twins can do, but what we are prepared to accept them becoming.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
