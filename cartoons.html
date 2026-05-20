@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Editorial Cartoons — Corelli.com</title>
+  <meta name="description" content="Editorial Cartoons — imaginings and flotsam that drift up from my cerebral cortex from time to time." />
+  <meta property="og:title" content="Editorial Cartoons — Corelli.com" />
+  <meta property="og:description" content="Editorial Cartoons — imaginings and flotsam that drift up from my cerebral cortex from time to time." />
+  <meta property="og:type" content="website" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#fff;
+      --text:#222;
+      --max: 980px;
+      --radius: 10px;
+
+      --soft-yellow:#fff8df;
+      --soft-yellow-border:#f1e4b8;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      --caption-blue:#6f8eae;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      background: var(--page-bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding: 0 18px 60px;
+      line-height: 1.6;
+    }
+
+    /* ===== Ribbon banner ===== */
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32, 93, 146, 0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+    .ribbon::before{left:0;clip-path:polygon(0 0, 100% 50%, 0 100%);}
+    .ribbon::after{right:0;clip-path:polygon(100% 0, 0 50%, 100% 100%);}
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    /* ===== Nav on silver bar ===== */
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background:var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+
+    nav.banner-nav a{
+      color:var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    /* ===== Soft-yellow framed panel (like sillyhero.html) ===== */
+    .caveman-panel{
+      max-width:calc(var(--max) + 40px);
+      margin:14px auto 0;
+      padding:10px 20px 18px;
+      background:var(--soft-yellow);
+      border:1px solid var(--soft-yellow-border);
+      border-radius:12px;
+      box-shadow:0 10px 22px rgba(44,62,80,0.06);
+    }
+
+    .title-wrap{
+      max-width:var(--max);
+      margin:0 auto 10px;
+      padding:0;
+    }
+
+    .section-title-bar{
+      display:block;
+      background:#000;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:0;
+      width:100%;
+      text-align:center;
+    }
+
+    .section-title-bar span{
+      font-weight:800;
+      letter-spacing:0.02em;
+    }
+
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .cartoon{
+      margin: 0 0 2rem 0;
+    }
+    .cartoon h2{
+      font-size: 1.25rem;
+      margin: 0 0 10px 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 6px;
+    }
+    .hero img{
+      max-width: 820px;
+      width: 74%;
+      border-radius: 12px;
+      box-shadow:0 10px 30px rgba(44,62,80,0.12);
+      display:block;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px solid #000;
+      object-fit: cover;
+    }
+
+    .caption{
+      text-align:center;
+      color: var(--caption-blue);
+      font-size: 0.96rem;
+      margin: 10px 0 0 0;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    footer.site-footer{
+      max-width:var(--max);
+      margin:26px auto 0;
+      text-align:center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 1.2rem 0 1rem 0;
+    }
+
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav { gap:1.2rem; padding:0.45rem 0; }
+      .caveman-panel{ padding:10px 14px 14px; }
+      .hero img{ width:78%; }
+    }
+
+    @media (max-width:520px){
+      header h1{font-size:1.25rem}
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+      .caveman-panel{ border-radius:10px; }
+      .hero img{ width:100%; border-radius:10px; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <!-- Dropped the white divider line below the banner, per request -->
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/london-punks.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <section class="caveman-panel" aria-label="Editorial Cartoons panel">
+    <div class="title-wrap" aria-label="Page title">
+      <div class="section-title-bar" id="editorial-cartoons-title">
+        <span>Editorial Cartoons</span>
+      </div>
+    </div>
+
+    <main role="main" aria-label="Editorial cartoons">
+      <section class="cartoon" aria-label="Animal Farm">
+        <h2>Animal Farm</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/animalgoofs.jpeg" alt="Animal Farm cartoon" loading="lazy" />
+        </div>
+        <p class="caption">The silliest of all animals</p>
+      </section>
+
+      <section class="cartoon" aria-label="Guard Cow">
+        <h2>Guard Cow</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/guardcow.jpeg" alt="Guard Cow cartoon" loading="lazy" />
+        </div>
+        <p class="caption">Protect your stuff with Cow Lock Security</p>
+      </section>
+
+      <section class="cartoon" aria-label="Judicial Crackdown">
+        <h2>Judicial Crackdown</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/courtfart.jpeg" alt="Judicial Crackdown cartoon" loading="lazy" />
+        </div>
+        <p class="caption">"Your honour, surveillance recordings and Exhibit A clearly demonstrate that the defendant, on the night of April 10, did discharge flatulence."</p>
+      </section>
+
+      <section class="cartoon" aria-label="Fruit Of The Gloom">
+        <h2>Fruit Of The Gloom</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/fruit.jpeg" alt="Fruit Of The Gloom cartoon" loading="lazy" />
+        </div>
+        <p class="caption">In the wee hours after the store closes and the people are gone, protests emerge over fruit leadership, echoing a world in turmoil</p>
+      </section>
+
+      <section class="cartoon" aria-label="I Sing The Cow Electric">
+        <h2>I Sing The Cow Electric</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/powercows.jpeg" alt="I Sing The Cow Electric cartoon" loading="lazy" />
+        </div>
+        <p class="caption">The green movement overtaking farming</p>
+      </section>
+
+      <section class="cartoon" aria-label="Humans Of The Future">
+        <h2>Humans Of The Future</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/humans.jpeg" alt="Humans Of The Future cartoon" loading="lazy" />
+        </div>
+        <p class="caption">The rejuvenation machine</p>
+      </section>
+
+      <section class="cartoon" aria-label="The World Is Lining Up">
+        <h2>The World Is Lining Up</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/tickets.jpeg" alt="The World Is Lining Up cartoon" loading="lazy" />
+        </div>
+        <p class="caption">The world is in a strange way...</p>
+      </section>
+
+      <section class="cartoon" aria-label="Making A Baby In The Internet Age">
+        <h2>Making A Baby In The Internet Age</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/babykit.jpeg" alt="Making A Baby In The Internet Age cartoon" loading="lazy" />
+        </div>
+        <p class="caption">It was much more fun in my generation...</p>
+      </section>
+
+      <section class="cartoon" aria-label="Modern Marriage Romance">
+        <h2>Modern Marriage Romance</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/lovetools.jpeg" alt="Modern Marriage Romance cartoon" loading="lazy" />
+        </div>
+        <p class="caption">Love Tools</p>
+      </section>
+
+      <section class="cartoon" aria-label="A Man's Idea Of Foreplay">
+        <h2>A Man's Idea Of Foreplay</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/begging.jpeg" alt="A Man's Idea Of Foreplay cartoon" loading="lazy" />
+        </div>
+        <p class="caption">A half hour of begging</p>
+      </section>
+
+      <section class="cartoon" aria-label="Window Dressing">
+        <h2>Window Dressing</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/gladiator.jpeg" alt="Window Dressing cartoon" loading="lazy" />
+        </div>
+        <p class="caption">Gladiator clothing for robust woman.</p>
+      </section>
+
+      <section class="cartoon" aria-label="Family Day At The Amusement Park">
+        <h2>Family Day At The Amusement Park</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/medical.jpeg" alt="Family Day At The Amusement Park cartoon" loading="lazy" />
+        </div>
+        <p class="caption">Fair fun</p>
+      </section>
+
+      <section class="cartoon" aria-label="Pubic Inquiry">
+        <h2>Pubic Inquiry</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/armpits.jpeg" alt="Pubic Inquiry cartoon" loading="lazy" />
+        </div>
+        <p class="caption">The mysterious disappearence of armpit hair.</p>
+      </section>
+
+      <section class="cartoon" aria-label="Dog Days Of Summer">
+        <h2>Dog Days Of Summer</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/doglines.jpeg" alt="Dog Days Of Summer cartoon" loading="lazy" />
+        </div>
+        <p class="caption">Who wants to go to the parkie-park-park!</p>
+      </section>
+
+      <section class="cartoon" aria-label="If Dogs Looked Like Their Names">
+        <h2>If Dogs Looked Like Their Names</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/dognames.jpeg" alt="If Dogs Looked Like Their Names cartoon" loading="lazy" />
+        </div>
+        <p class="caption">Appearances can be deceiving.</p>
+      </section>
+
+      <!-- Born Again added as the second-from-bottom cartoon -->
+      <section class="cartoon" aria-label="Born Again">
+        <h2>Born Again</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/bornagain.jpeg" alt="Born Again cartoon" loading="lazy" />
+        </div>
+        <p class="caption">So that's what that expression means!</p>
+      </section>
+
+      <section class="cartoon" aria-label="Technology Shall Make You Free">
+        <h2>Technology Shall Make You Free</h2>
+        <div class="hero" aria-hidden="false">
+          <img src="images/dork.jpeg" alt="Technology Shall Make You Free cartoon" loading="lazy" />
+        </div>
+        <p class="caption">Bringing us new tools to achieve self-awareness.</p>
+      </section>
+    </main>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
