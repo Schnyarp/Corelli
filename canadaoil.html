@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How The U.S. Fleeces Canada Over Oil — Corelli.com</title>
+  <meta name="description" content="An examination of how discounted Canadian crude exports may have transferred enormous economic value to the United States over decades." />
+  <meta property="og:title" content="How The U.S. Fleeces Canada Over Oil — Corelli.com" />
+  <meta property="og:description" content="An examination of how discounted Canadian crude exports may have transferred enormous economic value to the United States over decades." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/images/oilexports.jpeg" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32, 93, 146, 0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+    .ribbon::before{left:0;clip-path:polygon(0 0, 100% 50%, 0 100%);}
+    .ribbon::after{right:0;clip-path:polygon(100% 0, 0 50%, 100% 100%);}
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    .header-divider-white{
+      height:2px;
+      background:#fff;
+      margin-top:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background:var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+
+    nav.banner-nav a{
+      color:var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 6px 12px 0;
+      max-width: calc(var(--max-width) + 96px);
+      margin: 0 auto;
+    }
+    .hero img{
+      display:block;
+      margin:0 auto;
+      max-width: 720px;
+      width: 52%;
+      height:auto;
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: 0 10px 30px rgba(44,62,80,0.12);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav { gap:1.2rem; padding:0.45rem 0; }
+    }
+
+    @media (max-width:700px){
+      .subhead .kicker{ font-size:1.15rem; }
+      .hero img{ width: 55%; max-width: 560px; border-radius: 10px; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      header h1{font-size:1.25rem}
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+      .hero img{ width: 92%; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/gallery-lightbox.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">How The U.S. Fleeces Canada Over Oil</div>
+  </div>
+
+  <div class="hero" aria-hidden="false">
+    <img src="/images/oilexports.jpeg" alt="Oil exports" loading="lazy" />
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="How The U.S. Fleeces Canada Over Oil">
+      <section id="article-body">
+        <p>President Donald Trump portrays Canada as a country that somehow “takes advantage” of the United States economically. Yet one of the most important energy stories of the past three decades suggests the opposite is true.</p>
+
+        <p>The U.S. has effectively fleeced Canada of as much as $300 billion in recent years over oil exports.</p>
+
+        <p>Canada possesses some of the largest oil reserves on Earth, particularly in the oil sands of Alberta. But despite this immense resource wealth, Canada has long faced a structural problem: it has had limited ability to export its oil beyond the United States. For decades, inadequate pipeline access to ocean ports effectively trapped much of Canadian crude within the North American market, leaving the United States as the overwhelmingly dominant buyer.</p>
+
+        <p>This mattered enormously because oil prices are not universal. Canadian heavy crude — particularly Western Canadian Select (WCS) — has frequently sold at a substantial discount to global benchmark prices such as Brent crude. Some of that discount reflects quality differences and transportation costs. But a significant portion stemmed from simple market dynamics: Canada often lacked enough alternative customers.</p>
+
+        <p>In effect, the United States enjoyed the advantages of being a near-captive buyer.</p>
+
+        <p>When pipelines filled up or export routes stalled, Canadian producers were often forced to accept sharply lower prices rather than leave oil stranded inland. At various points over the last two decades, the discount widened dramatically, sometimes reaching US$20 to US$50 per barrel below world prices.</p>
+
+        <p>The cumulative financial impact has been staggering.</p>
+
+        <p>While precise estimates vary depending on methodology, a reasonable assessment suggests Canada may have effectively transferred between US$150 billion and US$300 billion in discounted oil value to the United States over the past thirty years. Some analyses imply the figure could be even higher.</p>
+
+        <p>A study by the C.D. Howe Institute estimated that the United States presently receives roughly US$19 billion annually in economic benefit from discounted Canadian crude. American refiners, particularly in the Midwest and Gulf Coast regions, have become highly optimized to process Canadian heavy oil, allowing them to purchase discounted feedstock and then sell refined products at global market prices.</p>
+
+        <p>Canada’s export dependence is extraordinary. Even today, roughly 90–97 per cent of Canadian crude exports flow to the United States. In 2024, Canada exported more than four million barrels of oil per day southward. Such concentration gave American buyers immense leverage over pricing.</p>
+
+        <p>Ironically, Canada’s embrace of freer continental energy markets in the 1980s was intended to improve efficiency and profitability. Instead, the country became a major energy superpower with something close to landlocked pricing.</p>
+
+        <p>This reality fueled decades of bitter political conflict over pipelines such as Keystone XL, Northern Gateway Pipelines, Energy East and the expansion of the Trans Mountain Pipeline. Supporters argued that gaining access to Asian and European markets would reduce the “Canadian discount” and allow Canada to receive closer to full world prices for its resources.</p>
+
+        <p>The broader irony remains difficult to ignore. While some American politicians accuse Canada of economic dependence or unfairness, the historical oil trade suggests the United States has quietly enjoyed one of the world’s most advantageous long-term energy relationships — powered in large part by discounted Canadian crude.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
