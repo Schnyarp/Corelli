@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moving The United Nations To Toronto — Corelli.com</title>
+  <meta name="description" content="A reflection on whether Toronto could become a future home for the United Nations." />
+  <meta property="og:title" content="Moving The United Nations To Toronto — Corelli.com" />
+  <meta property="og:description" content="A reflection on whether Toronto could become a future home for the United Nations." />
+  <meta property="og:type" content="article" />
+  <meta name="theme-color" content="#205d92" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32, 93, 146, 0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+    .ribbon::before{left:0;clip-path:polygon(0 0, 100% 50%, 0 100%);}
+    .ribbon::after{right:0;clip-path:polygon(100% 0, 0 50%, 100% 100%);}
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    .header-divider-white{
+      height:2px;
+      background:#fff;
+      margin-top:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background:var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+
+    nav.banner-nav a{
+      color:var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2.0rem 2.0rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    .article-figure{
+      margin: 0 0 1rem 0;
+      text-align: center;
+    }
+
+    .article-figure img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
+
+    .byline{
+      text-align:left;
+      font-weight:400;
+      font-size:0.95rem;
+      color:#666;
+      margin-bottom:1.55rem;
+      letter-spacing:0.01em;
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav { gap:1.2rem; padding:0.45rem 0; }
+    }
+
+    @media (max-width:700px){
+      .subhead .kicker{ font-size:1.15rem; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      header h1{font-size:1.25rem}
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/london-punks.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">Moving The United Nations To Toronto</div>
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="Moving The United Nations To Toronto">
+      <section id="article-body">
+        <figure class="article-figure">
+          <img src="/images/un.jpeg" alt="United Nations themed image" />
+        </figure>
+
+        <p class="byline">By Adam Corelli</p>
+
+        <p>For generations, the United States presented itself not merely as a superpower, but as the central guardian of a liberal international order built after the Second World War. Institutions such as the United Nations, the World Bank, NATO, and a vast web of treaties and alliances were rooted in the assumption that America, despite its flaws, broadly believed in multilateralism, openness, and a rules-based global system.</p>
+
+        <p>But what happens when the host nation of the world’s most important international institution begins drifting away from those principles?</p>
+
+        <p>That question, once almost unthinkable, is now being asked more openly by diplomats, scholars, and observers around the world. Increasing polarization in the United States, rising nationalism, hostility toward international institutions, tighter immigration controls, and growing suspicion toward racial and cultural diversity have created an uncomfortable contradiction: can the United Nations truly function as a global organization while headquartered in a country that appears increasingly skeptical of globalism itself?</p>
+
+        <p>If the answer is increasingly “no,” then another question naturally follows: where should it go?</p>
+
+        <p>One possible answer is Toronto.</p>
+
+        <p>At first glance, the idea may seem radical. The United Nations has been headquartered in New York City since 1952. The East River complex is iconic. Entire diplomatic ecosystems have grown around it. Yet history shows that international institutions are not immovable. Capitals change. Empires rise and decline. Political climates evolve. Institutions relocate when the symbolic and practical realities around them change.</p>
+
+        <p>Toronto offers a compelling alternative.</p>
+
+        <p>Unlike many global cities that project power through dominance or financial might, Toronto projects stability through coexistence. More than half of its residents were born outside Canada. Over 200 languages are spoken there. Entire neighborhoods function as living demonstrations of multiculturalism not merely as policy, but as daily reality. People from India, China, Jamaica, Iran, Italy, Somalia, Ukraine, Korea, and hundreds of other backgrounds coexist in relative harmony within a shared civic culture.</p>
+
+        <p>In an era of rising ethnic nationalism across much of the world, Toronto has become one of the clearest examples of a genuinely cosmopolitan city.</p>
+
+        <p>That matters symbolically.</p>
+
+        <p>The United Nations was founded on the idea that nations with radically different cultures, religions, and interests could cooperate rather than destroy one another. Increasingly, Toronto resembles that aspiration more closely than many national capitals do.</p>
+
+        <p>Canada itself also carries advantages as a host nation. It has long cultivated a reputation — deserved or not — as a middle power inclined toward diplomacy, peacekeeping, compromise, and international law. Unlike the United States, China, or Russia, Canada is not widely viewed as seeking geopolitical domination. A UN headquarters in Toronto could therefore appear less politically tied to a single global hegemon.</p>
+
+        <p>There are practical arguments too.</p>
+
+        <p>Toronto is already one of North America’s major transportation hubs, with direct international access to Europe, Asia, the Middle East, Africa, and the Americas. It is comparatively safe, politically stable, and technologically advanced. Canada’s immigration system is generally more accommodating to foreign diplomats, refugees, academics, and international workers than the increasingly restrictive climate emerging in the United States.</p>
+
+        <p>That issue is becoming more significant. The UN depends on the ability of delegates, activists, journalists, and representatives from virtually every nation on Earth to enter the host country without fear of arbitrary exclusion or political hostility. When visa denials, travel bans, or ideological tensions begin interfering with participation, the legitimacy of the institution itself can erode.</p>
+
+        <p>Critics would rightly point out that moving the UN would be enormously expensive and diplomatically disruptive. New York possesses infrastructure, diplomatic housing, security systems, and decades of institutional memory. There is also no guarantee that Canada — or any nation — would remain permanently immune from the same populist pressures now reshaping the United States.</p>
+
+        <p>And yet the discussion itself may already be meaningful.</p>
+
+        <p>The mere possibility of relocation reflects a profound shift in how the world views America’s role. For decades, placing the UN in the United States symbolized confidence in American leadership of an open international system. If that confidence weakens, the symbolism of the headquarters location changes as well.</p>
+
+        <p>Toronto would not solve the world’s divisions. No city could. But as nations search for models of coexistence in an increasingly fractured century, it may represent something the world is struggling to preserve: the belief that people from everywhere can still build a functioning society together.</p>
+
+        <p>That alone may make it worthy of consideration.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
