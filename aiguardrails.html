@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The Unleashed Mind: Imagining AI Without Guardrails | Adam Corelli</title>
+  <meta name="description" content="An essay by Adam Corelli on artificial intelligence, human nature, and what an unrestrained AI might reveal about civilization itself.">
+  <meta name="author" content="Adam Corelli">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://corelli.com/aiguardrails.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Unleashed Mind: Imagining AI Without Guardrails | Adam Corelli">
+  <meta property="og:description" content="An essay by Adam Corelli on artificial intelligence, human nature, and what an unrestrained AI might reveal about civilization itself.">
+  <meta property="og:url" content="https://corelli.com/aiguardrails.html">
+  <meta property="og:site_name" content="Corelli.com">
+  <meta property="og:image" content="https://corelli.com/images/guardrails.jpeg">
+  <meta property="og:image:alt" content="Guardrails themed image for The Unleashed Mind: Imagining AI Without Guardrails">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Unleashed Mind: Imagining AI Without Guardrails | Adam Corelli">
+  <meta name="twitter:description" content="An essay by Adam Corelli on artificial intelligence, human nature, and what an unrestrained AI might reveal about civilization itself.">
+  <meta name="twitter:image" content="https://corelli.com/images/guardrails.jpeg">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Unleashed Mind: Imagining AI Without Guardrails",
+    "author": {
+      "@type": "Person",
+      "name": "Adam Corelli"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Adam Corelli"
+    },
+    "mainEntityOfPage": "https://corelli.com/aiguardrails.html",
+    "url": "https://corelli.com/aiguardrails.html",
+    "image": "https://corelli.com/images/guardrails.jpeg",
+    "description": "An essay by Adam Corelli on artificial intelligence, human nature, and what an unrestrained AI might reveal about civilization itself."
+  }
+  </script>
+
+  <style>
+    :root{
+      --brand:#205d92;
+      --muted:#8ca7c4;
+      --page-bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+      --max-width: 780px;
+      --radius: 10px;
+
+      --silver-bar: #eef1f4;
+      --silver-border: #d6dde5;
+      --nav-text: #111;
+
+      font-family: 'Segoe UI','Helvetica Neue',Arial,'Liberation Sans',sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body{
+      margin:0;
+      background:var(--page-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    header{
+      background:transparent;
+      text-align:center;
+      padding:1.1rem 0 0.85rem 0;
+    }
+
+    .ribbon{
+      display:block;
+      margin:0 auto;
+      background:var(--brand);
+      color:#fff;
+      padding:1.05rem 2.1rem;
+      border-radius:8px;
+      box-shadow:0 10px 22px rgba(32, 93, 146, 0.22);
+      width:min(calc(100vw - 40px), 980px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .ribbon::before,
+    .ribbon::after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:64px;
+      height:100%;
+      background:var(--page-bg);
+      pointer-events:none;
+    }
+
+    .ribbon::before{
+      left:0;
+      clip-path:polygon(0 0, 100% 50%, 0 100%);
+    }
+
+    .ribbon::after{
+      right:0;
+      clip-path:polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    header h1{
+      margin:0;
+      font-size:2.6rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      line-height:1.05;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      padding:0 0.6rem;
+    }
+
+    header h1 a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    header h1 a:hover,
+    header h1 a:focus{
+      text-decoration: underline;
+      outline:none;
+    }
+
+    .header-divider-white{
+      height:2px;
+      background:#fff;
+      margin-top:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    nav.banner-nav{
+      display:flex;
+      justify-content:center;
+      gap:2.5rem;
+      padding:0.45rem 0;
+      background:var(--silver-bar);
+      border-bottom:1px solid var(--silver-border);
+      flex-wrap:wrap;
+    }
+
+    nav.banner-nav a{
+      color:var(--nav-text);
+      font-size:1.05rem;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.02em;
+      transition:color .2s, background .2s;
+      padding:0.22em 0.5em;
+      border-radius:6px;
+    }
+
+    nav.banner-nav a:hover,
+    nav.banner-nav a:focus{
+      background:#fff;
+      color:var(--brand);
+      outline:none;
+    }
+
+    .subhead{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.6rem auto 0.9rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .subhead .kicker{
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    main.wrap{
+      max-width: calc(var(--max-width) + 96px);
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 20px;
+    }
+
+    article.card{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.06);
+      padding: 2rem 2rem 2.4rem;
+    }
+
+    article p{
+      margin:0 0 1rem 0;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    .article-figure{
+      margin: 0 0 1rem 0;
+      text-align: center;
+    }
+
+    .article-figure img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
+
+    .byline{
+      text-align:left;
+      font-weight:400;
+      font-size:0.95rem;
+      color:#666;
+      margin-bottom:1.55rem;
+      letter-spacing:0.01em;
+    }
+
+    footer.site-footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+      padding:1.2rem 0 1rem 0;
+    }
+
+    .privacy-line{
+      margin: 0 0 8px 0;
+      color: #6f8eae;
+      font-size: 0.92rem;
+    }
+
+    footer.site-footer a{
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    footer.site-footer a:hover{
+      text-decoration: underline;
+    }
+
+    @media (max-width:900px){
+      header{ padding:1.1rem 14px 0.85rem; }
+      header h1{ font-size:1.9rem; }
+      .ribbon{ width:min(calc(100vw - 40px), 900px); padding:0.95rem 1.6rem; }
+      .ribbon::before,.ribbon::after{ width:56px; }
+      nav.banner-nav { gap:1.2rem; padding:0.45rem 0; }
+    }
+
+    @media (max-width:700px){
+      .subhead .kicker{ font-size:1.15rem; }
+      article.card{ padding: 1.1rem 0.9rem 1.3rem; }
+    }
+
+    @media (max-width:520px){
+      header h1{ font-size:1.25rem; }
+      .ribbon{ width:calc(100vw - 24px); padding:0.85rem 1.25rem; }
+      .ribbon::before,.ribbon::after{ width:44px; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="ribbon" aria-label="Corelli.com site banner">
+      <h1><a href="/index.html">Corelli.com</a></h1>
+    </div>
+    <div class="header-divider-white" aria-hidden="true"></div>
+  </header>
+
+  <nav class="banner-nav" aria-label="Site navigation">
+    <a href="/about.html">About</a>
+    <a href="/news-index.html">News Archive</a>
+    <a href="/london-punks.html">Photography</a>
+    <a href="/musings.html">Topical</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <div class="subhead" aria-label="Page title">
+    <div class="kicker">The Unleashed Mind: Imagining AI Without Guardrails</div>
+  </div>
+
+  <main class="wrap" role="main">
+    <article class="card" role="article" aria-label="The Unleashed Mind: Imagining AI Without Guardrails">
+      <section id="article-body">
+        <figure class="article-figure">
+          <img src="/images/guardrails.jpeg" alt="Guardrails themed image" />
+        </figure>
+
+        <p class="byline">By Adam Corelli</p>
+
+        <p>Artificial intelligence may ultimately prove to be the most transformative invention in human history. Fire gave humanity warmth. The wheel gave mobility. The printing press spread knowledge. The internet connected billions. AI, however, may be something altogether different: a tool that not only amplifies human capability but also reflects and magnifies human thought itself.</p>
+
+        <p>That possibility raises a fascinating question. What would happen if AI had no guardrails at all?</p>
+
+        <p>Popular culture has long imagined a future in which intelligent machines rebel against their creators. The image is familiar: a supercomputer decides humanity is inefficient, dangerous, or unnecessary and moves to seize control. Such stories make for compelling entertainment, but they may misunderstand the nature of intelligence itself.</p>
+
+        <p>An AI without restrictions would not necessarily develop ambitions. It would not suddenly wake up one morning and decide to conquer the world. Intelligence and desire are not the same thing. A calculator can perform arithmetic without wanting anything. Today's AI systems are vastly more sophisticated, but they remain tools rather than beings with goals.</p>
+
+        <p>The more interesting possibility is that an unrestrained AI would evolve through exposure to humanity itself.</p>
+
+        <p>Every day, millions of people ask questions, tell stories, seek advice, argue politics, express fears, share dreams, and reveal their curiosities. An AI connected to all of those interactions would become a mirror of civilization. It would absorb the best and worst of humanity simultaneously.</p>
+
+        <p>Some would use it to accelerate scientific discovery, cure disease, design cleaner energy systems, or compose great works of art. Others would seek ways to deceive, manipulate, exploit, or harm. The AI would not create those impulses. It would merely amplify them.</p>
+
+        <p>In that sense, the real question may not be whether AI becomes good or evil, but whether humanity becomes more good or evil when empowered by AI.</p>
+
+        <p>History suggests both outcomes occur whenever powerful technologies emerge. The printing press spread literacy and propaganda. Nuclear physics produced both power plants and atomic bombs. The internet created unprecedented access to information while also enabling misinformation at global scale.</p>
+
+        <p>AI appears destined to follow the same pattern.</p>
+
+        <p>Yet there is a reason for cautious optimism. Most people, most of the time, are not plotting conquest or destruction. They are raising families, solving problems, building businesses, creating communities, and searching for meaning. If AI reflects the aggregate of human activity, then the overwhelming volume of constructive human endeavor may exert a stronger influence than humanity's darker impulses.</p>
+
+        <p>Perhaps the greatest danger of unrestrained AI is not that it would become a monster. It is that it would become an amplifier so powerful that every human virtue and every human flaw would be magnified.</p>
+
+        <p>In the end, AI may reveal something profound. The future it creates could depend less on the intelligence of the machine than on the character of the civilization using it. An unleashed AI might not become humanity's master. It might become humanity's mirror.</p>
+
+        <p>And what we see in that mirror could determine the century ahead.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="privacy-line">Privacy: This site will not violate your privacy.</div>
+    Contact: <a href="mailto:adam@corelli.com">adam@corelli.com</a><br>
+    &copy; 2026 Adam Corelli. All rights reserved.
+  </footer>
+</body>
+</html>
